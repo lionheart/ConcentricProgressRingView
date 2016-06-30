@@ -36,9 +36,8 @@ let bars: [(UIColor, UIColor, CGFloat)] = [
 let width: CGFloat = 18
 let barMargin: CGFloat = 2
 let maxRadius: CGFloat = 80
-ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
 
-view.backgroundColor = UIColor.blackColor()
 view.addSubview(ring)
 ```
 
@@ -59,10 +58,24 @@ let bars: [(UIColor, UIColor, CGFloat)] = [
 let width: CGFloat = 8
 let barMargin: CGFloat = 10
 let maxRadius: CGFloat = 120
-ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
 ```
 
 ![](example2.png)
+
+### Animation
+
+To animate a progress change, use the `set` method on `ring`. The following will update the second progress bar to 50% completion and will animate it over 2 seconds.
+
+```swift
+ring.arcs[1].set(0.5, duration: 2)
+```
+
+You can also use subscripts to access the arcs as shorthand:
+
+```swift
+ring[1].set(0.5, duration: 2)
+```
 
 ## Requirements
 
