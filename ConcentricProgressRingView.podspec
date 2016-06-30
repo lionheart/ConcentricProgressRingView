@@ -1,11 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ConcentricProgressRingView'
   s.version          = '1.0.0'
-  s.summary          = 'A Swift view to display concentric progress rings.'
-
-  s.description      = <<-DESC
-                       DESC
-
+  s.summary          = 'Fully customizable circular progress bar written in Swift"
   s.homepage         = 'https://github.com/lionheart/ConcentricProgressRingView'
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.author           = { 'Dan Loewenherz' => 'dan@lionheartsw.com' }
