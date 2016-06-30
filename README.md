@@ -19,26 +19,30 @@ At the top of your file, make sure to import "ConcentricProgressRingView"
 import ConcentricProgressRingView
 ```
 
-Then, instantiate ConcentricProgressRingView in your view controller like so:
+Then, instantiate ConcentricProgressRingView in your view controller:
 
 ```swift
-let foregroundColor1 = UIColor.yellowColor()
-let backgroundColor1 = UIColor.darkGrayColor()
-let foregroundColor2 = UIColor.greenColor()
-let backgroundColor2 = UIColor.darkGrayColor()
-let initialProgress: CGFloat = 0.2
+func viewDidLoad() {
+    super.viewDidLoad()
 
-let bars: [(UIColor, UIColor, CGFloat)] = [
-  (foregroundColor1, backgroundColor1, initialProgress),
-  (foregroundColor2, backgroundColor2, initialProgress),
-]
+    let foregroundColor1 = UIColor.yellowColor()
+    let backgroundColor1 = UIColor.darkGrayColor()
+    let foregroundColor2 = UIColor.greenColor()
+    let backgroundColor2 = UIColor.darkGrayColor()
+    let initialProgress: CGFloat = 0.2
 
-let width: CGFloat = 18
-let barMargin: CGFloat = 2
-let maxRadius: CGFloat = 80
-let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+    let bars: [(UIColor, UIColor, CGFloat)] = [
+      (foregroundColor1, backgroundColor1, initialProgress),
+      (foregroundColor2, backgroundColor2, initialProgress),
+    ]
 
-view.addSubview(ring)
+    let width: CGFloat = 18
+    let barMargin: CGFloat = 2
+    let maxRadius: CGFloat = 80
+    let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+
+    view.addSubview(ring)
+}
 ```
 
 ![](example1.png)
