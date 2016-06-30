@@ -2,13 +2,14 @@ use_frameworks!
 
 target 'ConcentricProgressRingView_Example' do
   pod 'ConcentricProgressRingView', :path => '../'
+  pod 'LionheartExtensions'
 
   target 'ConcentricProgressRingView_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+    pod 'Nimble', '~> 3.0'
+    pod 'FBSnapshotTestCase'
+    pod 'Nimble-Snapshots'
   end
 end
