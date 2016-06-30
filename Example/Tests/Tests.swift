@@ -2,49 +2,32 @@
 
 import Quick
 import Nimble
-import ConcentricProgressRingView
+@testable import ConcentricProgressRingView
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
+        let foregroundColor1 = UIColor.yellowColor()
+        let backgroundColor1 = UIColor.darkGrayColor()
+        let foregroundColor2 = UIColor.greenColor()
+        let backgroundColor2 = UIColor.darkGrayColor()
+        let initialProgress: CGFloat = 0.2
 
-            it("can do maths") {
-                expect(1) == 2
-            }
+        let bars: [(UIColor, UIColor, CGFloat)] = [
+            (foregroundColor1, backgroundColor1, initialProgress),
+            (foregroundColor2, backgroundColor2, initialProgress),
+            (foregroundColor1, backgroundColor2, initialProgress),
+            (foregroundColor2, backgroundColor2, initialProgress),
+            (foregroundColor1, backgroundColor2, initialProgress),
+            (foregroundColor2, backgroundColor2, initialProgress),
+            ]
 
-            it("can read") {
-                expect("number") == "string"
-            }
+        let width: CGFloat = 8
+        let barMargin: CGFloat = 10
+        let maxRadius: CGFloat = 120
 
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
+        let view = ConcentricProgressRingView(arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
 
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
-        }
+        expect(view.arcs.count) == 6
+        expect(view[0]) == view.arcs.first
     }
 }
