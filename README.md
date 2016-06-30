@@ -64,7 +64,7 @@ let ring = ConcentricProgressRingView(center: view.center, radius: radius, margi
 
 ![](example2.png)
 
-Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them and provide default values in the initializer. If you don't, the compiler will warn you that there's a problem. The initializer with defaults can throw an error if you provide invalid parameters, so you'll also need to handle errors.
+Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them and provide default values in the initializer. If you don't, the compiler will warn you that there's a problem. The initializer with defaults can throw if you provide invalid parameters, so you'll need to handle that.
 
 ```swift
 let rings = [
