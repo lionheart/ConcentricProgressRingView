@@ -65,7 +65,8 @@ public final class ConcentricProgressRingView: UIView {
     public var arcs: [ProgressRingLayer] = []
     var circles: [CircleLayer] = []
 
-    public init(frame: CGRect, arcWidth: CGFloat, margin: CGFloat, maxRadius: CGFloat, bars: [(UIColor, UIColor, CGFloat)]) {
+    public init(arcWidth: CGFloat, margin: CGFloat, maxRadius: CGFloat, bars: [(UIColor, UIColor, CGFloat)]) {
+        let frame = CGRectMake(0, 0, maxRadius * 2, maxRadius * 2)
         super.init(frame: frame)
 
         for (i, (color, background, percent)) in bars.enumerate() {
