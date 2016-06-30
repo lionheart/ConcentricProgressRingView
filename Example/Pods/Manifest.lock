@@ -1,0 +1,35 @@
+PODS:
+  - ConcentricProgressRingView (0.1.0)
+  - FBSnapshotTestCase (2.1.1):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
+  - FBSnapshotTestCase/Core (2.1.1)
+  - FBSnapshotTestCase/SwiftSupport (2.1.1):
+    - FBSnapshotTestCase/Core
+  - Nimble (3.2.0)
+  - Nimble-Snapshots (4.1.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
+  - Quick (0.9.2)
+
+DEPENDENCIES:
+  - ConcentricProgressRingView (from `../`)
+  - FBSnapshotTestCase
+  - Nimble (~> 3.0)
+  - Nimble-Snapshots
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  ConcentricProgressRingView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ConcentricProgressRingView: 26622f6ee3be2c8d6940bb91d6b1878ed5a89ceb
+  FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+
+PODFILE CHECKSUM: 19853a1be928f9cb9da5e076df11ea9bfacdabfa
+
+COCOAPODS: 1.0.1
