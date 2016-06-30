@@ -14,7 +14,29 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright (c) 2016 Dan Loewenherz &lt;dan@lionheartsw.com&gt;
+			<string>Copyright 2016 Lionheart Software LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+</string>
+			<key>Title</key>
+			<string>ConcentricProgressRingView</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright (c) 2016 Dan Loewenherz &lt;dloewenherz@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +57,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
 			<key>Title</key>
-			<string>ConcentricProgressRingView</string>
+			<string>LionheartExtensions</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

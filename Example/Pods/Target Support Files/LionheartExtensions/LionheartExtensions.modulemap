@@ -1,0 +1,6 @@
+framework module LionheartExtensions {
+  umbrella header "LionheartExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
