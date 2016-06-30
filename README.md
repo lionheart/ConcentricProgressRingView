@@ -39,7 +39,7 @@ func viewDidLoad() {
     let width: CGFloat = 18
     let barMargin: CGFloat = 2
     let maxRadius: CGFloat = 80
-    let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+    let ring = ConcentricProgressRingView(arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
 
     view.addSubview(ring)
 }
@@ -62,7 +62,7 @@ let bars: [(UIColor, UIColor, CGFloat)] = [
 let width: CGFloat = 8
 let barMargin: CGFloat = 10
 let maxRadius: CGFloat = 120
-let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+let ring = ConcentricProgressRingView(arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
 ```
 
 ![](example2.png)
