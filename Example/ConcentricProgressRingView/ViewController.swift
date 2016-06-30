@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         let arcBars: [(UIColor, UIColor, CGFloat)] = [
             (UIColor(red:0.626,  green:1,  blue:0.003, alpha:1), UIColor(red:0.174,  green:0.259,  blue:0.016, alpha:1), 0.2),
             (UIColor(red:1,  green:0.828,  blue:0.012, alpha:1), UIColor(red:0.334,  green:0.306,  blue:0.002, alpha:1), 0.4),
@@ -25,7 +24,7 @@ class ViewController: UIViewController {
         let width: CGFloat = 18
         let margin: CGFloat = 2
         let maxRadius: CGFloat = 80
-        ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin: margin, maxRadius: maxRadius, bars: arcBars)
+        ring = ConcentricProgressRingView(arcWidth: width, margin: margin, maxRadius: maxRadius, bars: arcBars)
 
         view.backgroundColor = UIColor.blackColor()
         view.addSubview(ring)
