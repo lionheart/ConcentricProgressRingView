@@ -2,21 +2,22 @@
 
 import Quick
 import Nimble
+import LionheartExtensions
 @testable import ConcentricProgressRingView
 
 class ConcentricProgressRingSpec: XCTestCase {
-    let arcBars: [(UIColor, UIColor, CGFloat)] = [
-        (UIColor(red:0.626,  green:1,  blue:0.003, alpha:1), UIColor(red:0.174,  green:0.259,  blue:0.016, alpha:1), 0.2),
-        (UIColor(red:1,  green:0.828,  blue:0.012, alpha:1), UIColor(red:0.334,  green:0.306,  blue:0.002, alpha:1), 0.4),
-        (UIColor(red:1,  green:0.11,  blue:0.366, alpha:1), UIColor(red:0.205,  green:0.035,  blue:0.073, alpha:1), 0.6)
+    static let width: CGFloat = 18
+    static let margin: CGFloat = 2
+    static let radius: CGFloat = 80
+
+    static let bars: [ProgressRing] = [
+        ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: width, progress: 0.2),
+        ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: width, progress: 0.2),
+        ProgressRing(color: UIColor(.RGB(255, 28, 93)), backgroundColor: UIColor(.RGB(52, 0, 19)), width: width, progress: 0.2),
     ]
 
-    let width: CGFloat = 18
-    let margin: CGFloat = 2
-    let maxRadius: CGFloat = 80
-
     func testConcentricProgressRingViewArcs() {
-        let view = ConcentricProgressRingView(center: CGPoint.zero, radius: maxRadius, arcWidth: width, margin: margin, bars: arcBars)
+        let view = ConcentricProgressRingView(center: CGPointZero, radius: ConcentricProgressRingSpec.radius, margin: ConcentricProgressRingSpec.margin, rings: ConcentricProgressRingSpec.bars)
 
         expect(view.arcs.count) == 3
         expect(view.circles.count) == 3
@@ -25,7 +26,7 @@ class ConcentricProgressRingSpec: XCTestCase {
     }
 
     func testConcentricProgressRingViewCircles() {
-        let view = ConcentricProgressRingView(center: CGPoint.zero, radius: maxRadius, arcWidth: width, margin: margin, bars: arcBars)
+        let view = ConcentricProgressRingView(center: CGPointZero, radius: ConcentricProgressRingSpec.radius, margin: ConcentricProgressRingSpec.margin, rings: ConcentricProgressRingSpec.bars)
 
         expect(view.arcs.count) == 3
         expect(view.circles.count) == 3

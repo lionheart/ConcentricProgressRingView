@@ -29,17 +29,15 @@ func viewDidLoad() {
     let backgroundColor1 = UIColor.darkGrayColor()
     let foregroundColor2 = UIColor.greenColor()
     let backgroundColor2 = UIColor.darkGrayColor()
-    let initialProgress: CGFloat = 0.2
 
-    let bars: [(UIColor, UIColor, CGFloat)] = [
-      (foregroundColor1, backgroundColor1, initialProgress),
-      (foregroundColor2, backgroundColor2, initialProgress),
+    let rings = [
+        ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 18, progress: 0.2),
+        ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 18, progress: 0.2),
     ]
 
-    let width: CGFloat = 18
-    let barMargin: CGFloat = 2
+    let margin: CGFloat = 2
     let radius: CGFloat = 80
-    let ring = ConcentricProgressRingView(center: view.center, radius: radius, arcWidth: width, margin: barMargin, bars: bars)
+    let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 
     view.addSubview(ring)
 }
@@ -50,35 +48,70 @@ func viewDidLoad() {
 You can customize the width, margin, and radius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller bar width, larger margin between bars, and a larger radius:
 
 ```swift
-let bars: [(UIColor, UIColor, CGFloat)] = [
-    (foregroundColor1, backgroundColor1, initialProgress),
-    (foregroundColor2, backgroundColor2, initialProgress),
-    (foregroundColor1, backgroundColor2, initialProgress),
-    (foregroundColor2, backgroundColor2, initialProgress),
-    (foregroundColor1, backgroundColor2, initialProgress),
-    (foregroundColor2, backgroundColor2, initialProgress),
+let bars = [
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, percent: 0.2),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, percent: 0.2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, percent: 0.2),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, percent: 0.2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, percent: 0.2),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, percent: 0.2),
 ]
 
-let width: CGFloat = 8
-let barMargin: CGFloat = 10
+let margin: CGFloat = 10
 let radius: CGFloat = 120
-let ring = ConcentricProgressRingView(center: view.center, radius: radius, arcWidth: width, margin: barMargin, bars: bars)
+let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
 ```
 
 ![](example2.png)
 
-### Animation
-
-To animate a progress update, use the `set` method on `ring`. The following will update the second progress bar to 50% completion and will animate it over 2 seconds.
+Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them. You'll just need to provide default values in the initializer. If you don't, the compiler will warn you that there's a problem.
 
 ```swift
-ring.arcs[1].set(0.5, duration: 2)
+let rings = [
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2),
+]
+
+let margin: CGFloat = 10
+let radius: CGFloat = 120
+let width: CGFloat = 8
+let progress: CGFloat = 0.2
+ring = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: nil, defaultWidth: width, defaultProgress: progress)
+```
+
+### Customization
+
+Rings can have varying widths, colors, and background colors.
+
+```swift
+let rings = [
+    ProgressRing(width: 40, percent: 0.2, color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4))),
+    ProgressRing(width: 20, percent: 0.4, color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0))),
+
+    // Background color is optional, so go ahead and skip it.
+    ProgressRing(width: 30, percent: 0.6, color: UIColor(.RGB(255, 28, 93)))
+]
+ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
+```
+
+![](example3.png)
+
+### Animation
+
+To animate a progress update, use the `set` method.
+
+```swift
+ring.arcs[1].setProgress(0.5, duration: 2)
 ```
 
 You can also use subscripts to access the individual arcs:
 
 ```swift
-ring[1].set(0.5, duration: 2)
+ring[1].setProgress(0.5, duration: 2)
 ```
 
 If you just want to change the progress, just set the progress on the ring, and it'll change it immediately.

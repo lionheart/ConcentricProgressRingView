@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ConcentricProgressRingView/Classes/**/*'
+  s.dependency 'LionheartExtensions'
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 import ConcentricProgressRingView
+import LionheartExtensions
 
 class ViewController: UIViewController {
     var ring: ConcentricProgressRingView!
@@ -15,16 +16,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let arcBars: [(UIColor, UIColor, CGFloat)] = [
-            (UIColor(red:0.626,  green:1,  blue:0.003, alpha:1), UIColor(red:0.174,  green:0.259,  blue:0.016, alpha:1), 0.2),
-            (UIColor(red:1,  green:0.828,  blue:0.012, alpha:1), UIColor(red:0.334,  green:0.306,  blue:0.002, alpha:1), 0.4),
-            (UIColor(red:1,  green:0.11,  blue:0.366, alpha:1), UIColor(red:0.205,  green:0.035,  blue:0.073, alpha:1), 0.6)
+        let margin: CGFloat = 10
+        let radius: CGFloat = 120
+        let foregroundColor1 = UIColor.yellowColor()
+        let backgroundColor1 = UIColor.darkGrayColor()
+        let foregroundColor2 = UIColor.greenColor()
+        let backgroundColor2 = UIColor.darkGrayColor()
+        let rings = [
+            ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40, progress: 0.2),
+            ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20, progress: 0.4),
+
+            // Background color is optional, so go ahead and skip it.
+            ProgressRing(color: UIColor(.RGB(255, 28, 93)), width: 30, progress: 0.6)
         ]
 
-        let width: CGFloat = 18
-        let margin: CGFloat = 2
-        let maxRadius: CGFloat = 80
-        ring = ConcentricProgressRingView(center: view.center, radius: maxRadius, arcWidth: width, margin: margin, bars: arcBars)
+        ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+
+//        let margin: CGFloat = 2
+//        let radius: CGFloat = 120
+//
+//        let rings = [
+//            ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40, progress: 0.2),
+//            ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20, progress: 0.4),
+//
+//            // No background color specified.
+//            ProgressRing(color: UIColor(.RGB(255, 28, 93)), width: 30, progress: 0.6)
+//        ]
+//        ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 
         view.backgroundColor = UIColor.blackColor()
         view.addSubview(ring)
@@ -34,7 +52,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         for (i, _) in ring.arcs.enumerate() {
-            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
+//            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
         }
     }
 
@@ -45,7 +63,7 @@ class ViewController: UIViewController {
 
         let f = Int64(0.2 * Double(index)) * Int64(NSEC_PER_SEC)
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, f), dispatch_get_main_queue(), {
-            self.ring[index].set(CGFloat(drand48()), duration: max(0.4, CGFloat(0.5)))
+            self.ring[index].setProgress(CGFloat(drand48()), duration: max(0.4, CGFloat(0.5)))
         })
     }
 }
