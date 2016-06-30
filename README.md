@@ -47,7 +47,7 @@ func viewDidLoad() {
 
 ![](example1.png)
 
-You can customize the width, margin, and maxRadius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller width, larger marging, and larger max radius:
+You can customize the width, margin, and maxRadius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller bar width, larger margin between bars, and a larger max radius:
 
 ```swift
 let bars: [(UIColor, UIColor, CGFloat)] = [
