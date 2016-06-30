@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         for (i, _) in ring.arcs.enumerate() {
-//            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
         }
     }
 
