@@ -69,16 +69,22 @@ let ring = ConcentricProgressRingView(frame: view.frame, arcWidth: width, margin
 
 ### Animation
 
-To animate a progress change, use the `set` method on `ring`. The following will update the second progress bar to 50% completion and will animate it over 2 seconds.
+To animate a progress update, use the `set` method on `ring`. The following will update the second progress bar to 50% completion and will animate it over 2 seconds.
 
 ```swift
 ring.arcs[1].set(0.5, duration: 2)
 ```
 
-You can also use subscripts to access the arcs as shorthand:
+You can also use subscripts to access the individual arcs:
 
 ```swift
 ring[1].set(0.5, duration: 2)
+```
+
+If you just want to change the progress, just set the progress on the ring, and it'll change it immediately.
+
+```swift
+ring[1].progress = 0.5
 ```
 
 ## Requirements
@@ -91,6 +97,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "ConcentricProgressRingView"
 ```
+
+## TODO
+
+* [ ] Swift 3
+* [ ] Documentation
+* [ ] Tests
 
 ## Author
 
