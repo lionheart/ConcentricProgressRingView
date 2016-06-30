@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let width: CGFloat = 18
         let margin: CGFloat = 2
         let maxRadius: CGFloat = 80
-        ring = ConcentricProgressRingView(arcWidth: width, margin: margin, maxRadius: maxRadius, bars: arcBars)
+        ring = ConcentricProgressRingView(center: view.center, radius: maxRadius, arcWidth: width, margin: margin, bars: arcBars)
 
         view.backgroundColor = UIColor.blackColor()
         view.addSubview(ring)

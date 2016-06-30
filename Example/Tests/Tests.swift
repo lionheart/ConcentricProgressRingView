@@ -16,7 +16,7 @@ class ConcentricProgressRingSpec: XCTestCase {
     let maxRadius: CGFloat = 80
 
     func testConcentricProgressRingViewArcs() {
-        let view = ConcentricProgressRingView(arcWidth: width, margin: margin, maxRadius: maxRadius, bars: arcBars)
+        let view = ConcentricProgressRingView(center: CGPoint.zero, radius: maxRadius, arcWidth: width, margin: margin, bars: arcBars)
 
         expect(view.arcs.count) == 3
         expect(view.circles.count) == 3
@@ -25,7 +25,7 @@ class ConcentricProgressRingSpec: XCTestCase {
     }
 
     func testConcentricProgressRingViewCircles() {
-        let view = ConcentricProgressRingView(arcWidth: width, margin: margin, maxRadius: maxRadius, bars: arcBars)
+        let view = ConcentricProgressRingView(center: CGPoint.zero, radius: maxRadius, arcWidth: width, margin: margin, bars: arcBars)
 
         expect(view.arcs.count) == 3
         expect(view.circles.count) == 3
