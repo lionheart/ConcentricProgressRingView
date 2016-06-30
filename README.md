@@ -64,7 +64,7 @@ let ring = ConcentricProgressRingView(center: view.center, radius: radius, margi
 
 ![](example2.png)
 
-Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them. You'll just need to provide default values in the initializer. If you don't, the compiler will warn you that there's a problem.
+Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them and provide default values in the initializer. If you don't, the compiler will warn you that there's a problem. The initializer with defaults can throw an error if you provide invalid parameters, so you'll also need to handle errors.
 
 ```swift
 let rings = [
@@ -80,10 +80,8 @@ let margin: CGFloat = 10
 let radius: CGFloat = 120
 let width: CGFloat = 8
 let progress: CGFloat = 0.2
-ring = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: nil, defaultWidth: width, defaultProgress: progress)
+let ring = try? ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: nil, defaultWidth: width, defaultProgress: progress)
 ```
-
-### Customization
 
 Rings can have varying widths, colors, and background colors.
 
@@ -100,7 +98,7 @@ ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: m
 
 ![](example3.png)
 
-### Animation
+#### Animation
 
 To animate a progress update, use the `set` method.
 
