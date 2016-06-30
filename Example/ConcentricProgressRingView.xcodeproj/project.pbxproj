@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3706788E1D25BD0C00B831E0 /* ConcentricProgressRingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3706788D1D25BD0C00B831E0 /* ConcentricProgressRingView.framework */; };
-		370678901D25BD2900B831E0 /* ConcentricProgressRingView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3706788D1D25BD0C00B831E0 /* ConcentricProgressRingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		370678911D25C1A400B831E0 /* ConcentricProgressRingView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3706788D1D25BD0C00B831E0 /* ConcentricProgressRingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53E434774E9374AD974FA98A /* Pods_ConcentricProgressRingView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F993201B16EC82DD46326199 /* Pods_ConcentricProgressRingView_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				370678901D25BD2900B831E0 /* ConcentricProgressRingView.framework in CopyFiles */,
+				370678911D25C1A400B831E0 /* ConcentricProgressRingView.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
