@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
 [![Platform](https://img.shields.io/cocoapods/p/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
 
+![](animation.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
