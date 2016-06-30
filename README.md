@@ -38,8 +38,8 @@ func viewDidLoad() {
 
     let width: CGFloat = 18
     let barMargin: CGFloat = 2
-    let maxRadius: CGFloat = 80
-    let ring = ConcentricProgressRingView(arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+    let radius: CGFloat = 80
+    let ring = ConcentricProgressRingView(center: view.center, radius: radius, arcWidth: width, margin: barMargin, bars: bars)
 
     view.addSubview(ring)
 }
@@ -47,7 +47,7 @@ func viewDidLoad() {
 
 ![](example1.png)
 
-You can customize the width, margin, and maxRadius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller bar width, larger margin between bars, and a larger max radius:
+You can customize the width, margin, and radius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller bar width, larger margin between bars, and a larger radius:
 
 ```swift
 let bars: [(UIColor, UIColor, CGFloat)] = [
@@ -61,8 +61,8 @@ let bars: [(UIColor, UIColor, CGFloat)] = [
 
 let width: CGFloat = 8
 let barMargin: CGFloat = 10
-let maxRadius: CGFloat = 120
-let ring = ConcentricProgressRingView(arcWidth: width, margin: barMargin, maxRadius: maxRadius, bars: bars)
+let radius: CGFloat = 120
+let ring = ConcentricProgressRingView(center: view.center, radius: radius, arcWidth: width, margin: barMargin, bars: bars)
 ```
 
 ![](example2.png)
