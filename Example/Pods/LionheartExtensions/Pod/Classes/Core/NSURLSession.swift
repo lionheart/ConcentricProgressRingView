@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 public extension NSURLSession {
     /**
      Cancel all tasks associated with the `NSURLSession`.

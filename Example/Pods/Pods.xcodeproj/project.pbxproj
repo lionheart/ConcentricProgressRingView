@@ -1420,36 +1420,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		09D6D089720DE451B997C455DEA1F98D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA7A098EA2552908938E3C0725DD2F5D /* ConcentricProgressRingView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ConcentricProgressRingView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1EAB35ACB452D210D5CF60F7847CD85B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC4384E5F4D9F8D8A7B1397A398AAAC7 /* FBSnapshotTestCase.xcconfig */;
@@ -1518,9 +1488,9 @@
 			};
 			name = Release;
 		};
-		45215D5BBB358E1D7F27244AAF70F26F /* Debug */ = {
+		3FFCFF5B0DBE0E38B00C4587EA9EAD15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E614D46FD503F99EB1B358E6DB9F4CB3 /* LionheartExtensions.xcconfig */;
+			baseConfigurationReference = EA7A098EA2552908938E3C0725DD2F5D /* ConcentricProgressRingView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1531,14 +1501,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LionheartExtensions;
+				PRODUCT_NAME = ConcentricProgressRingView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1576,6 +1546,36 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		4B00825479BA75E63A449FB0DF64A193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E614D46FD503F99EB1B358E6DB9F4CB3 /* LionheartExtensions.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LionheartExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		5AAB066D3D4B35BAA4FCF6385B78B160 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1679,7 +1679,7 @@
 			};
 			name = Debug;
 		};
-		662FC5526FD44A913896C2D384E7E92F /* Release */ = {
+		76D7891354678DB0B4E86FB670B13F66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E614D46FD503F99EB1B358E6DB9F4CB3 /* LionheartExtensions.xcconfig */;
 			buildSettings = {
@@ -1695,7 +1695,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1809,35 +1809,6 @@
 			};
 			name = Debug;
 		};
-		C52702E1CFA075E6E4DED55996593E45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA7A098EA2552908938E3C0725DD2F5D /* ConcentricProgressRingView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ConcentricProgressRingView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		CBC8377EBA83197B271A26A15AB300D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0A9B9448F778FA0A07DC61FDB7D9B1E /* Quick.xcconfig */;
@@ -1888,6 +1859,35 @@
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Nimble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D795539987655301745B344CCE93F474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA7A098EA2552908938E3C0725DD2F5D /* ConcentricProgressRingView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ConcentricProgressRingView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2012,8 +2012,8 @@
 		5223A000D948C1317C76609CA17FEB1A /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				09D6D089720DE451B997C455DEA1F98D /* Debug */,
-				C52702E1CFA075E6E4DED55996593E45 /* Release */,
+				3FFCFF5B0DBE0E38B00C4587EA9EAD15 /* Debug */,
+				D795539987655301745B344CCE93F474 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2030,8 +2030,8 @@
 		6B048CA7D4036F593858989E17F285EE /* Build configuration list for PBXNativeTarget "LionheartExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45215D5BBB358E1D7F27244AAF70F26F /* Debug */,
-				662FC5526FD44A913896C2D384E7E92F /* Release */,
+				4B00825479BA75E63A449FB0DF64A193 /* Debug */,
+				76D7891354678DB0B4E86FB670B13F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

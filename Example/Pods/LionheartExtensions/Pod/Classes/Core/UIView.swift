@@ -95,6 +95,7 @@ public extension UIView {
      - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
+    @available(iOS 9.0, *)
     func setContentSize(size: CGSize) {
         widthAnchor.constraintEqualToConstant(size.width).active = true
         heightAnchor.constraintEqualToConstant(size.height).active = true

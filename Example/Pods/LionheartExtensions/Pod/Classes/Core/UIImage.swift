@@ -205,6 +205,7 @@ public extension UIImage {
         }
     }
     
+    @available(iOS 9.0, *)
     func saveToCameraRoll(completion: ((Bool, NSError?) -> Void)?) throws {
         let library = PHPhotoLibrary.sharedPhotoLibrary()
         library.performChanges({
