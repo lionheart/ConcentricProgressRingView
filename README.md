@@ -62,7 +62,7 @@ let radius: CGFloat = 120
 let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 ```
 
-![](example2.png)
+<img src="example2.png" width="194" />
 
 Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them and provide default values in the initializer. If you don't, the compiler will warn you that there's a problem. The initializer with defaults can throw if you provide invalid parameters, so you'll need to handle that.
 
@@ -96,7 +96,7 @@ let rings = [
 let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
 ```
 
-![](example3.png)
+<img src="example2.png" width="198" />
 
 #### Animation
 
