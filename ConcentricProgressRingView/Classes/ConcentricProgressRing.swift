@@ -29,20 +29,15 @@ public struct ProgressRing {
 }
 
 public class ProgressRingLayer: CAShapeLayer {
-    public var progress: CGFloat? {
-        didSet {
-            guard let progress = progress else {
-                return
-            }
+    var completion: (Void -> Void)?
 
-            setProgress(progress, duration: 0)
-        }
-    }
+    dynamic public var progress: CGFloat = 0
 
     public init(center: CGPoint, radius: CGFloat, progress: CGFloat, width: CGFloat, color: UIColor) {
         super.init()
 
         let bezier = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat(M_PI * 2 - M_PI_2), clockwise: true)
+        delegate = self
         path = bezier.CGPath
         fillColor = UIColor.clearColor().CGColor
         strokeColor = color.CGColor
@@ -60,16 +55,44 @@ public class ProgressRingLayer: CAShapeLayer {
         super.init(layer: layer)
     }
 
-    public func setProgress(progress: CGFloat, duration: CGFloat) {
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.fromValue = strokeEnd
-        animation.toValue = progress
-        animation.duration = CFTimeInterval(duration)
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-
-        strokeEnd = progress
-        addAnimation(animation, forKey: "strokeEnd")
+    public override func displayLayer(layer: CALayer) {
+        
     }
+
+    override public class func needsDisplayForKey(key: String) -> Bool {
+        if key == "progress" {
+            return true
+        }
+
+        return super.needsDisplayForKey(key)
+    }
+
+    public override func actionForKey(event: String) -> CAAction? {
+        if event == "progress" {
+            let animation = CABasicAnimation(keyPath: "strokeEnd")
+            animation.fromValue = strokeEnd
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            return animation
+        }
+
+        return super.actionForKey(event)
+    }
+
+    public override func display() {
+        print("hi")
+    }
+
+//    public func setProgress(progress: CGFloat, duration: CGFloat, completion: Void -> Void) {
+//        let animation = CABasicAnimation(keyPath: "strokeEnd")
+//        animation.fromValue = strokeEnd
+//        animation.toValue = progress
+//        animation.duration = CFTimeInterval(duration)
+//        animation.delegate = self
+//        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+//
+//        strokeEnd = progress
+//        addAnimation(animation, forKey: "strokeEnd")
+//    }
 }
 
 public final class CircleLayer: ProgressRingLayer {
