@@ -108,7 +108,7 @@ public final class ConcentricProgressRingView: UIView {
     public convenience init(center: CGPoint, radius: CGFloat, margin: CGFloat, rings theRings: [ProgressRing?], defaultColor: UIColor?, defaultBackgroundColor: UIColor = UIColor.clearColor(), defaultWidth: CGFloat?, defaultProgress: CGFloat = 0) throws {
         var rings: [ProgressRing] = []
 
-        for var ring in theRings {
+        for ring in theRings {
             guard var ring = ring else {
                 continue
             }
@@ -138,7 +138,7 @@ public final class ConcentricProgressRingView: UIView {
         super.init(frame: frame)
 
         var offset: CGFloat = 0
-        for (i, ring) in rings.enumerate() {
+        for ring in rings {
             let color = ring.color!
             let width = ring.width!
             let progress = ring.progress ?? 0
