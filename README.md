@@ -150,4 +150,4 @@ Dan Loewenherz, dan@lionheartsw.com
 
 ## License
 
-ConcentricProgressRingView is available under the Apache 2.0 license. See the LICENSE file for more info.
+ConcentricProgressRingView is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.
