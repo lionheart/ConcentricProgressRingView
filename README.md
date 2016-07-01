@@ -96,7 +96,7 @@ let rings = [
 let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
 ```
 
-<img src="example2.png" width="198" />
+<img src="example3.png" width="198" />
 
 #### Animation
 
