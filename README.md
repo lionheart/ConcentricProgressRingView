@@ -59,7 +59,7 @@ let rings = [
 
 let margin: CGFloat = 10
 let radius: CGFloat = 120
-ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 ```
 
 ![](example2.png)
@@ -93,7 +93,7 @@ let rings = [
     // Background color is optional, so go ahead and skip it.
     ProgressRing(width: 30, percent: 0.6, color: UIColor(.RGB(255, 28, 93)))
 ]
-ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
+let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
 ```
 
 ![](example3.png)
