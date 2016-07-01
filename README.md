@@ -88,10 +88,10 @@ Rings can have varying widths, colors, and background colors.
 
 ```swift
 let rings = [
-            ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40),
-            ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20),
-            ProgressRing(color: UIColor(.RGB(255, 28, 93))),
-        ]
+    ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40),
+    ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20),
+    ProgressRing(color: UIColor(.RGB(255, 28, 93))),
+]
 let progressRingView = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultWidth: 30)
 ```
 
@@ -111,13 +111,13 @@ You can also use subscripts to access the individual arcs.
 ring[1].setProgress(0.5, duration: 2)
 ```
 
-If you just want to change the progress, just set the progress on the ring, and it'll change it immediately.
+If you just want to change the progress, just set the progress on the ring, and it'll change immediately.
 
 ```swift
 ring[1].progress = 0.5
 ```
 
-If you'd like to update multiple rings simulataneously, you can iterate over the `ConcentricProgressRingView` since it conforms to `SequenceType`.
+If you'd like to update multiple rings simulataneously, you can iterate over `ConcentricProgressRingView` since it conforms to `SequenceType`.
 
 ```swift
 for ring in progressRingView {
