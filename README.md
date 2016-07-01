@@ -11,7 +11,7 @@ Fully customizable, circular progress bar written in Swift.
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. You can also view the example app without downloading the sample project with [Appetize.io](https://appetize.io/app/xw49k81xufbqkmwdhpebkpyn58?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3&deviceColor=black).
 
 ### Usage
 
