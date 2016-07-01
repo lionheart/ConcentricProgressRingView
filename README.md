@@ -90,9 +90,7 @@ Rings can have varying widths, colors, and background colors.
 let rings = [
     ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40),
     ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20),
-
-    // No background color specified.
-    ProgressRing(color: UIColor(.RGB(255, 28, 93)), width: 30)
+    ProgressRing(color: UIColor(.RGB(255, 28, 93)), UIColor(.RGB(0, 30, 28)), width: 30)
 ]
 let progressRingView = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 ```
