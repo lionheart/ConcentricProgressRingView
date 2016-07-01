@@ -11,9 +11,9 @@ class ConcentricProgressRingSpec: XCTestCase {
     static let radius: CGFloat = 80
 
     static let bars: [ProgressRing] = [
-        ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: width, progress: 0.2),
-        ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: width, progress: 0.2),
-        ProgressRing(color: UIColor(.RGB(255, 28, 93)), backgroundColor: UIColor(.RGB(52, 0, 19)), width: width, progress: 0.2),
+        ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: width),
+        ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: width),
+        ProgressRing(color: UIColor(.RGB(255, 28, 93)), backgroundColor: UIColor(.RGB(52, 0, 19)), width: width),
     ]
 
     func testConcentricProgressRingViewArcs() {

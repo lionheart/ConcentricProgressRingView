@@ -11,30 +11,34 @@ import ConcentricProgressRingView
 import LionheartExtensions
 
 class ViewController: UIViewController {
-    var ring: ConcentricProgressRingView!
+    var progressRingView: ConcentricProgressRingView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let margin: CGFloat = 2
-        let radius: CGFloat = 120
+        let margin: CGFloat = 1
+        let radius: CGFloat = 80
 
         let rings = [
-            ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40, progress: 0.2),
-            ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20, progress: 0.4),
-            ProgressRing(color: UIColor(.RGB(255, 28, 93)), backgroundColor: UIColor(.RGB(52, 7, 18)), width: 30, progress: 0.6)
+            ProgressRing(color: UIColor(.RGB(232, 11, 45)), backgroundColor: UIColor(.RGB(34, 3, 11))),
+            ProgressRing(color: UIColor(.RGB(137, 242, 0)), backgroundColor: UIColor(.RGB(22, 33, 0))),
+            ProgressRing(color: UIColor(.RGB(0, 200, 222)), backgroundColor: UIColor(.RGB(0, 30, 28)))
         ]
-        ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+        progressRingView = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: UIColor.clearColor(), defaultWidth: 18)
+
+        for ring in progressRingView {
+            ring.progress = 0.5
+        }
 
         view.backgroundColor = UIColor.blackColor()
-        view.addSubview(ring)
+        view.addSubview(progressRingView)
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        for (i, _) in ring.arcs.enumerate() {
-            NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
+        for (i, _) in progressRingView.enumerate() {
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
         }
     }
 
@@ -43,7 +47,10 @@ class ViewController: UIViewController {
             return
         }
 
-        self.ring[index].setProgress(CGFloat(drand48()), duration: 2)
+        let f = Int64(0.2 * Double(index) * Double(NSEC_PER_SEC))
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, f), dispatch_get_main_queue(), {
+            self.progressRingView[index].setProgress(CGFloat(drand48()), duration: max(0.4, CGFloat(drand48())))
+        })
     }
 }
 

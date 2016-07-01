@@ -33,15 +33,15 @@ func viewDidLoad() {
     let backgroundColor2 = UIColor.darkGrayColor()
 
     let rings = [
-        ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 18, progress: 0.2),
-        ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 18, progress: 0.2),
+        ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 18),
+        ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 18),
     ]
 
     let margin: CGFloat = 2
     let radius: CGFloat = 80
-    let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+    let progressRingView = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 
-    view.addSubview(ring)
+    view.addSubview(progressRingView)
 }
 ```
 
@@ -51,22 +51,22 @@ You can customize the width, margin, and radius, along with the number of rings.
 
 ```swift
 let rings = [
-    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, progress: 0.2),
-    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, progress: 0.2),
-    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, progress: 0.2),
-    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, progress: 0.2),
-    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, progress: 0.2),
-    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, progress: 0.2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10),
 ]
 
 let margin: CGFloat = 10
 let radius: CGFloat = 120
-let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+let progressRingView = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 ```
 
 <img src="example2.png" width="194" />
 
-Repeating widths, progress percentages, colors, and background colors can get a bit tedious, so you can omit them---but you'll still need to provide default values to the initializer. If you don't, the compiler will warn you that there's a problem. The initializer can throw if you provide invalid parameters, so you'll need to handle that.
+Repeating widths can get a bit tedious, so you can omit them---but you'll still need to provide default values to the initializer. If you don't, the compiler will warn you that there's a problem. The initializer can throw if you provide invalid parameters, so you'll need to handle that.
 
 ```swift
 let rings = [
@@ -81,21 +81,20 @@ let rings = [
 let margin: CGFloat = 10
 let radius: CGFloat = 120
 let width: CGFloat = 8
-let progress: CGFloat = 0.2
-let ring = try? ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: nil, defaultWidth: width, defaultProgress: progress)
+let progressRingView = try? ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: nil, defaultWidth: width)
 ```
 
 Rings can have varying widths, colors, and background colors.
 
 ```swift
 let rings = [
-    ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40, progress: 0.2),
-    ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20, progress: 0.4),
+    ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40),
+    ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20),
 
     // No background color specified.
-    ProgressRing(color: UIColor(.RGB(255, 28, 93)), width: 30, progress: 0.6)
+    ProgressRing(color: UIColor(.RGB(255, 28, 93)), width: 30)
 ]
-let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+let progressRingView = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 ```
 
 <img src="example3.png" width="198" />
