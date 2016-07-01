@@ -99,7 +99,7 @@ let progressRingView = ConcentricProgressRingView(center: view.center, radius: r
 
 <img src="example3.png" width="198" />
 
-#### Animation
+#### Updating Progress
 
 To animate a progress update, use `setProgress`.
 
@@ -117,6 +117,14 @@ If you just want to change the progress, just set the progress on the ring, and 
 
 ```swift
 ring[1].progress = 0.5
+```
+
+If you'd like to update multiple rings simulataneously, you can iterate over the `ConcentricProgressRingView` since it conforms to `SequenceType`.
+
+```swift
+for ring in progressRingView {
+    ring.progress = 0.5
+}
 ```
 
 ## Requirements
