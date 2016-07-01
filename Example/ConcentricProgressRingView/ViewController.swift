@@ -22,9 +22,7 @@ class ViewController: UIViewController {
         let rings = [
             ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40, progress: 0.2),
             ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20, progress: 0.4),
-
-            // No background color specified.
-            ProgressRing(color: UIColor(.RGB(255, 28, 93)), width: 30, progress: 0.6)
+            ProgressRing(color: UIColor(.RGB(255, 28, 93)), backgroundColor: UIColor(.RGB(52, 7, 18)), width: 30, progress: 0.6)
         ]
         ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 
