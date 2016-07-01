@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/lionheart/ConcentricProgressRingView.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/lionheart'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.4'
 
   s.source_files = 'ConcentricProgressRingView/Classes/**/*'
   s.dependency 'LionheartExtensions'
