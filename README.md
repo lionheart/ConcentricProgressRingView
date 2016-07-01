@@ -88,14 +88,14 @@ Rings can have varying widths, colors, and background colors.
 
 ```swift
 let rings = [
-    ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40),
-    ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20),
-    ProgressRing(color: UIColor(.RGB(255, 28, 93)), UIColor(.RGB(0, 30, 28)), width: 30)
-]
-let progressRingView = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
+            ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: 40),
+            ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: 20),
+            ProgressRing(color: UIColor(.RGB(255, 28, 93))),
+        ]
+let progressRingView = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultWidth: 30)
 ```
 
-<img src="example3.png" width="198" />
+<img src="example3.png" width="267" />
 
 #### Updating Progress
 
