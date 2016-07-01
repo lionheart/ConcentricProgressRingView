@@ -47,7 +47,7 @@ func viewDidLoad() {
 
 ![](example1.png)
 
-You can customize the width, margin, and radius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller bar width, larger margin between bars, and a larger radius:
+You can customize the width, margin, and radius, along with the number of rings. Here's another example with 6 progress rings, with a smaller bar width, larger margin between rings, and a larger radius:
 
 ```swift
 let rings = [
