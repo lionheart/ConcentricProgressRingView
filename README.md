@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
 [![Platform](https://img.shields.io/cocoapods/p/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
 
+Fully customizable, circular progress bar written in Swift.
+
 ![](animation.gif)
 
 ## Example
