@@ -48,18 +48,18 @@ func viewDidLoad() {
 You can customize the width, margin, and radius parameters to customize everything to your liking. You can add as many bars as you want. Here's another example with 6 progress bars, with a smaller bar width, larger margin between bars, and a larger radius:
 
 ```swift
-let bars = [
-    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, percent: 0.2),
-    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, percent: 0.2),
-    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, percent: 0.2),
-    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, percent: 0.2),
-    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, percent: 0.2),
-    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, percent: 0.2),
+let rings = [
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, progress: 0.2),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, progress: 0.2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, progress: 0.2),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, progress: 0.2),
+    ProgressRing(color: foregroundColor1, backgroundColor: backgroundColor1, width: 10, progress: 0.2),
+    ProgressRing(color: foregroundColor2, backgroundColor: backgroundColor2, width: 10, progress: 0.2),
 ]
 
 let margin: CGFloat = 10
 let radius: CGFloat = 120
-let ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, bars: bars)
+ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings)
 ```
 
 ![](example2.png)
@@ -100,13 +100,13 @@ ring = ConcentricProgressRingView(center: view.center, radius: radius, margin: m
 
 #### Animation
 
-To animate a progress update, use the `set` method.
+To animate a progress update, use `setProgress`.
 
 ```swift
 ring.arcs[1].setProgress(0.5, duration: 2)
 ```
 
-You can also use subscripts to access the individual arcs:
+You can also use subscripts to access the individual arcs.
 
 ```swift
 ring[1].setProgress(0.5, duration: 2)

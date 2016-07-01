@@ -29,13 +29,15 @@ public struct ProgressRing {
 }
 
 public class ProgressRingLayer: CAShapeLayer {
-    public var progress: CGFloat? {
-        didSet {
-            guard let progress = progress else {
-                return
-            }
+    var completion: (Void -> Void)?
 
-            setProgress(progress, duration: 0)
+    public var progress: CGFloat? {
+        get {
+            return strokeEnd
+        }
+
+        set {
+            strokeEnd = newValue ?? 0
         }
     }
 
@@ -43,6 +45,7 @@ public class ProgressRingLayer: CAShapeLayer {
         super.init()
 
         let bezier = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat(M_PI * 2 - M_PI_2), clockwise: true)
+        delegate = self
         path = bezier.CGPath
         fillColor = UIColor.clearColor().CGColor
         strokeColor = color.CGColor
@@ -60,15 +63,22 @@ public class ProgressRingLayer: CAShapeLayer {
         super.init(layer: layer)
     }
 
-    public func setProgress(progress: CGFloat, duration: CGFloat) {
+    public func setProgress(progress: CGFloat, duration: CGFloat, completion: (Void -> Void)? = nil) {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = strokeEnd
         animation.toValue = progress
         animation.duration = CFTimeInterval(duration)
+        animation.delegate = self
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
 
         strokeEnd = progress
         addAnimation(animation, forKey: "strokeEnd")
+    }
+
+    public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            completion?()
+        }
     }
 }
 

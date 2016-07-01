@@ -1,5 +1,6 @@
 PODS:
-  - ConcentricProgressRingView (1.1.0)
+  - ConcentricProgressRingView (1.1.0):
+    - LionheartExtensions
   - FBSnapshotTestCase (2.1.1):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
   - FBSnapshotTestCase/Core (2.1.1)
@@ -28,7 +29,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ConcentricProgressRingView: d7295fc11aa1bcd2d1f4551e5977c13704addf95
+  ConcentricProgressRingView: 71c106767b91169ae37991b1111f95a82df09d09
   FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
   LionheartExtensions: 7359193d02a8c345051e8bd1710376bd40fde90a
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
