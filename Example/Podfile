@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'ConcentricProgressRingView_Example' do
   pod 'ConcentricProgressRingView', :path => '../'
-  pod 'LionheartExtensions'
+  pod 'LionheartExtensions', '~> 3.4'
 
   target 'ConcentricProgressRingView_Tests' do
     inherit! :search_paths
