@@ -26,10 +26,10 @@ Then, instantiate ConcentricProgressRingView in your view controller:
 func viewDidLoad() {
     super.viewDidLoad()
 
-    let fgColor1 = UIColor.yellowColor()
-    let bgColor1 = UIColor.darkGrayColor()
-    let fgColor2 = UIColor.greenColor()
-    let bgColor2 = UIColor.darkGrayColor()
+    let fgColor1 = UIColor.yellow
+    let bgColor1 = UIColor.darkGray
+    let fgColor2 = UIColor.green
+    let bgColor2 = UIColor.darkGray
 
     let rings = [
         ProgressRing(color: fgColor1, backgroundColor: bgColor1, width: 18),
