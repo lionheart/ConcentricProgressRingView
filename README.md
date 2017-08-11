@@ -137,9 +137,9 @@ pod "ConcentricProgressRingView"
 
 ## TODO
 
-* [ ] Swift 3
+* [x] Swift 3
 * [ ] Documentation
-* [ ] Tests
+* [x] Tests
 
 ## Author
 
