@@ -24,31 +24,31 @@ class ViewController: UIViewController {
             ProgressRing(color: UIColor(.RGB(137, 242, 0)), backgroundColor: UIColor(.RGB(22, 33, 0))),
             ProgressRing(color: UIColor(.RGB(0, 200, 222)), backgroundColor: UIColor(.RGB(0, 30, 28)))
         ]
-        progressRingView = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: UIColor.clearColor(), defaultWidth: 18)
+        progressRingView = try! ConcentricProgressRingView(center: view.center, radius: radius, margin: margin, rings: rings, defaultColor: UIColor.clear, defaultWidth: 18)
 
         for ring in progressRingView {
             ring.progress = 0.5
         }
 
-        view.backgroundColor = UIColor.blackColor()
+        view.backgroundColor = UIColor.black
         view.addSubview(progressRingView)
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        for (i, _) in progressRingView.enumerate() {
-            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(randomAnimation), userInfo: i, repeats: true)
+        for (i, _) in progressRingView.enumerated() {
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(randomAnimation(_:)), userInfo: i, repeats: true)
         }
     }
 
-    func randomAnimation(timer: NSTimer?) {
+    func randomAnimation(_ timer: Timer?) {
         guard let index = timer?.userInfo as? Int else {
             return
         }
 
         let f = Int64(0.2 * Double(index) * Double(NSEC_PER_SEC))
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, f), dispatch_get_main_queue(), {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(f) / Double(NSEC_PER_SEC), execute: {
             self.progressRingView[index].setProgress(CGFloat(drand48()), duration: max(0.4, CGFloat(drand48())))
         })
     }
