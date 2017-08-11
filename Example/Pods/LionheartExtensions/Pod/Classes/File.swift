@@ -1,86 +1,87 @@
 //
-//  File.swift
-//  LionheartExtensions
+//  Copyright 2016 Lionheart Software LLC
 //
-//  Created by Daniel Loewenherz on 3/4/16.
-//  Copyright © 2016 Lionheart Software LLC. All rights reserved.
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//  http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 
 import Foundation
 
-final class File: StringLiteralConvertible {
+final class File {
     var filename: String?
 
+    init(_ filename: String) {
+        self.filename = filename
+    }
+
     lazy var documentsPath: String? = {
-        let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        if let path = paths.first,
-            filename = self.filename {
-                return path.stringByAppendingPathComponent(filename)
+        let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
+        guard let path = paths.first,
+            let filename = self.filename else {
+                return nil
         }
-        else {
-            return nil
-        }
+
+        return path.appendingPathComponent(filename)
     }()
 
     var bundlePath: String? {
-        let bundle = NSBundle.mainBundle()
-        if let filename = filename {
-            let components = filename.componentsSeparatedByString(".")
-            return bundle.pathForResource(components[0], ofType: components[1])
-        }
-        else {
+        let bundle = Bundle.main
+        guard let filename = filename else {
             return nil
         }
-    }
 
-    typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
-    typealias UnicodeScalarLiteralType = StringLiteralType
-
-    init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
-        filename = value
-    }
-
-    init(stringLiteral value: StringLiteralType) {
-        filename = value
-    }
-
-    init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-        filename = value
+        let components = filename.components(separatedBy: ".")
+        return bundle.path(forResource: components[0], ofType: components[1])
     }
 
     func read() -> String? {
-        var contents: String?
-        let path = documentsPath ?? bundlePath
-
-        if let path = path {
-            do {
-                contents = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-            }
-            catch {
-                // MARK: TODO
-            }
+        guard let path = documentsPath ?? bundlePath else {
+            return nil
         }
 
-        return contents
+        return try? String(contentsOfFile: path, encoding: .utf8)
     }
 
-    func existsInBundle() -> Bool {
-        let manager = NSFileManager.defaultManager()
-
+    var existsInBundle: Bool {
         guard let path = bundlePath else {
             return false
         }
 
-        return manager.fileExistsAtPath(path)
+        return FileManager.default.fileExists(atPath: path)
     }
 
-    func existsInDocuments() -> Bool {
-        let manager = NSFileManager.defaultManager()
-
+    var existsInDocuments: Bool {
         guard let path = documentsPath else {
             return false
         }
 
-        return manager.fileExistsAtPath(path)
+        return FileManager.default.fileExists(atPath: path)
+    }
+}
+
+extension File: ExpressibleByStringLiteral {
+    public typealias StringLiteralType = String
+    public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
+    public typealias UnicodeScalarLiteralType = StringLiteralType
+
+    public convenience init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
+        self.init(value)
+    }
+
+    public convenience init(stringLiteral value: StringLiteralType) {
+        self.init(value)
+    }
+
+    public convenience init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+        self.init(value)
     }
 }
