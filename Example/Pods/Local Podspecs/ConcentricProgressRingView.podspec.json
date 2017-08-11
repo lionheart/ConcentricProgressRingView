@@ -1,6 +1,6 @@
 {
   "name": "ConcentricProgressRingView",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "summary": "Fully customizable circular progress bar written in Swift",
   "homepage": "https://github.com/lionheart/ConcentricProgressRingView",
   "license": {
@@ -12,11 +12,11 @@
   },
   "source": {
     "git": "https://github.com/lionheart/ConcentricProgressRingView.git",
-    "tag": "1.4.0"
+    "tag": "1.4.1"
   },
   "social_media_url": "https://twitter.com/lionheart",
   "platforms": {
-    "ios": "8.4"
+    "ios": "9.3"
   },
   "source_files": "ConcentricProgressRingView/Classes/**/*",
   "dependencies": {
