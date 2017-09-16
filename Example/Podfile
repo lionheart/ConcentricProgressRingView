@@ -1,4 +1,5 @@
 use_frameworks!
+platform :ios, '10.3'
 
 target 'ConcentricProgressRingView_Example' do
   pod 'ConcentricProgressRingView', :path => '../'
@@ -8,6 +9,6 @@ target 'ConcentricProgressRingView_Example' do
     inherit! :search_paths
 
     pod 'Quick', '~> 1'
-    pod 'Nimble', '~> 5'
+    pod 'Nimble', '~> 7.0'
   end
 end
