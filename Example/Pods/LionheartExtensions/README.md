@@ -22,4 +22,4 @@ See [http://lionheartsw.com/LionheartExtensions/](http://lionheartsw.com/Lionhea
 
 ## License
 
-LionheartExtensions is available under the Apache 2.0 license. See the LICENSE file for more info.
+LionheartExtensions is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.

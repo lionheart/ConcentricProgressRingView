@@ -23,6 +23,8 @@ final class File {
         self.filename = filename
     }
 
+    /**
+     */
     lazy var documentsPath: String? = {
         let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
         guard let path = paths.first,

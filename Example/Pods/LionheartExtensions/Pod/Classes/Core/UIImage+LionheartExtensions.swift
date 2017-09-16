@@ -247,6 +247,11 @@ public extension UIImage {
         }
     }
 
+    /**
+     The average color of the image.
+
+     - date: May 24, 2017
+     */
     var averageColor: UIColor? {
         guard let ciImage = CIImage(image: self) else {
             return nil
@@ -258,7 +263,7 @@ public extension UIImage {
         ]
 
         let image = ciImage.applyingFilter("CIAreaAverage", withInputParameters: parameters)
-        guard let (r, g, b, a) = image.rgbValues(atPoint: CGPoint(x: 0, y: 0)) else {
+        guard let (r, g, b, a) = image.rgbValues(atPoint: CGPoint(x: 1, y: 1)) else {
             return nil
         }
 

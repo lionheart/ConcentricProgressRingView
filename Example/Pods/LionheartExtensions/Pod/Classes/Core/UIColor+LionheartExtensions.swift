@@ -52,9 +52,6 @@ public extension UIColor {
      If a provided value is invalid, the color will be white with an alpha value of 0.
      
      - parameter color: a `ColorRepresentation`
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
      */
     convenience init(_ color: ColorRepresentation) {
         switch color {
@@ -83,9 +80,6 @@ public extension UIColor {
      
      - parameter ratio: the ratio by which to lighten the color by.
      - returns: A new `UIColor`.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
      */
     func lighten(byRatio ratio: CGFloat) -> UIColor {
         var rgba = [CGFloat](repeating: 0, count: 4)

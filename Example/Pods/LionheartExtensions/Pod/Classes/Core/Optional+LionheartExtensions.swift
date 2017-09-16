@@ -17,10 +17,10 @@
 
 import Foundation
 
-public extension Optional where Wrapped: ExpressibleByStringLiteral {
+public extension Optional where Wrapped == String {
     /** Coerce empty strings to nil. */
     var nilIfEmpty: String? {
-        guard let value = self as? String, value != "" else {
+        guard let value = self, value != "" else {
             return nil
         }
 

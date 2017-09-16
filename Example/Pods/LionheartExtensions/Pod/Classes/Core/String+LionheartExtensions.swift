@@ -78,6 +78,7 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
+    /// Coerce empty strings to nil.
     var nilIfEmpty: String? {
         guard self != "" else {
             return nil
@@ -90,28 +91,41 @@ public extension String {
      Returns an `NSRange` indicating the length of the `String`.
      
      - returns: An `NSRange`
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
      */
     var range: NSRange {
         return NSMakeRange(0, characters.count)
     }
 
+    /**
+     Converts an `NSRange` for the current `String` to a a type of `Range<String.Index>`.
+
+     - returns: A range of type `Range<String.Index>`
+     */
     func toRange(_ range: NSRange) -> Range<String.Index> {
         let start = characters.index(startIndex, offsetBy: range.location)
         let end = characters.index(start, offsetBy: range.length)
         return start..<end
     }
 
+    /**
+     - returns: Returns the length of the current string.
+     */
     var length: Int {
         return NSString(string: self).length
     }
 
+    /**
+     Trim all characters from the string in the specified character set.
+     
+     - parameter characterSet: a `CharacterSet` specifying which characters to trim from the string
+     */
     mutating func trim(_ characterSet: CharacterSet) {
         self = self.trimmingCharacters(in: characterSet)
     }
 
+    /**
+     URL encode the current string.
+     */
     mutating func URLEncode() {
         guard let string = URLEncodedString else {
             return
@@ -128,24 +142,36 @@ public extension String {
         self = stringByConverting(toNamingFormat: .underscores)
     }
 
+    /**
+     A copy of the current `String` with the first letter lowercased.
+     */
     var stringByLowercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
         return substring(to: start).lowercased() + substring(with: start..<endIndex)
     }
 
+    /**
+     A copy of the current `String` with the first letter uppercased.
+     */
     var stringByUppercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
         return substring(to: start).uppercased() + substring(with: start..<endIndex)
     }
 
+    /**
+     A URL encoded copy of the current `String`.
+     */
     var URLEncodedString: String? {
-        guard let string = addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+        guard let string = addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             return nil
         }
 
         return string
     }
 
+    /**
+     A copy of the current `String` with all spaces replaced with dashes.
+     */
     var stringByReplacingSpacesWithDashes: String {
         let options: NSRegularExpression.Options = []
         let regex = try! NSRegularExpression(pattern: "[ ]", options: options)
@@ -203,12 +229,9 @@ public extension String {
 
 public extension NSString {
     /**
-     Returns an `NSRange` indicating the length of the `NSString`.
+     An `NSRange` indicating the length of the `NSString`.
      
      - returns: An `NSRange`
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
      */
     var range: NSRange {
         return String(self).range

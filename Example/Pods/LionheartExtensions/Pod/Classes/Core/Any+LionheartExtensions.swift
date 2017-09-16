@@ -17,10 +17,12 @@
 
 import Foundation
 
+/**
+ If an optional is contained in any `Any` value, this function "lifts" the non-optional value out of it.
+ 
+ - note: May no longer be useful as of Swift 3.
+ */
 public func liftOptionalFromAny(_ value: Any) -> Any {
-    /**
-     If an optional is contained in any `Any` value, this function "lifts" the non-optional value out of it.
-    */
     let mirror = Mirror(reflecting: value)
     if mirror.displayStyle != .optional {
         return value

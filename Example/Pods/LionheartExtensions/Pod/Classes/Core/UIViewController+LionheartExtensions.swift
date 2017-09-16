@@ -22,8 +22,6 @@ public extension UIViewController {
      Returns an optional with the top-level `UIViewController`.
      
      - returns: The active `UIViewController`, if it can be found.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     class var topViewController: UIViewController? {
@@ -34,8 +32,6 @@ public extension UIViewController {
      Return an optional with the top-level `UIViewController` for the provided `UIViewController`.
      
      - returns: The active `UIViewController`, if it can be found.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
      - date: February 17, 2016
      */
     class func topViewControllerWithRootViewController(_ rootViewController: UIViewController?) -> UIViewController? {
