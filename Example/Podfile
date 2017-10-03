@@ -3,7 +3,7 @@ platform :ios, '10.3'
 
 target 'ConcentricProgressRingView_Example' do
   pod 'ConcentricProgressRingView', :path => '../'
-  pod 'LionheartExtensions', '~> 3.4'
+  pod 'LionheartExtensions'
 
   target 'ConcentricProgressRingView_Tests' do
     inherit! :search_paths
