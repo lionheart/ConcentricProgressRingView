@@ -12,6 +12,8 @@ fileprivate struct DateFormatterString {
     static let DateComponent1 = "MM-dd-yyyy"
     static let DateComponent2 = "dd-MM-yyyy"
     static let DateComponent3 = "yyyy-MM-dd"
+    static let DateComponent4 = "yyyy-dd-MM"
+    static let DateComponent5 = "yyyy-MM-dd'T'HH:mm:ssZ"
 
     static let TimeComponent1 = "HH:mm"
     static let TimeComponent2 = "hh:mm a"
@@ -21,7 +23,7 @@ fileprivate struct DateFormatterString {
     static let TimeComponent6 = "hh:mm:ss a Z"
 
     // Take one of the following
-    static let NoSpaceFormatStrings = [DateComponent1, DateComponent2, DateComponent3]
+    static let NoSpaceFormatStrings = [DateComponent1, DateComponent2, DateComponent3, DateComponent4, DateComponent5]
 
     // And mix with one of these
     static let OneSpaceFormatStrings = [TimeComponent1, TimeComponent3]
@@ -36,11 +38,12 @@ public extension DateFormatter {
         dateFormat = format
     }
 
-    // Returns nil if inconsistencies within data
+    /// Returns a `DateFormatter` that handles all of the provided `dateStrings`, or `nil` if a formatter could not be found.
     static func formatter(dateStrings: [String]) -> DateFormatter? {
         var numberOfSpaces: Int?
         for dateString in dateStrings {
-            let count = dateString.characters.filter({ $0 == " " }).count
+            let characters: [Character] = dateString.characters.filter({ $0 == " " })
+            let count = characters.count
 
             // If the number of spaces between date strings is inconsistent, there's no way we can find a formatter to match all of them.
             if let numberOfSpaces = numberOfSpaces, count != numberOfSpaces {
@@ -56,11 +59,9 @@ public extension DateFormatter {
         }
 
         var formatters: [DateFormatter] = []
-        switch _numberOfSpaces {
-        case 0:
+        if _numberOfSpaces == 0 {
             formatters = DateFormatterString.NoSpaceFormatStrings.map { DateFormatter(format: $0) }
-
-        default:
+        } else {
             let timeFormatStrings: [String]
             switch _numberOfSpaces {
             case 1: timeFormatStrings = DateFormatterString.OneSpaceFormatStrings

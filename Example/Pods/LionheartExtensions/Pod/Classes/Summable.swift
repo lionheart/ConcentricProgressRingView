@@ -88,7 +88,7 @@ extension NSDecimalNumber: ExpressibleByDecimal {
 
 extension Array where Element: ExpressibleByDecimal {
     public var sum: Element {
-        let value = reduce(0, { $0.1.decimalNumber.adding($0.0) })
+        let value = reduce(0, { $1.decimalNumber.adding($0) })
         return Element.makeFromNumber(value)
     }
 }

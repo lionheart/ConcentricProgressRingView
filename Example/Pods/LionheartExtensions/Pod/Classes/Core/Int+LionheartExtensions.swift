@@ -28,9 +28,10 @@ public extension Int {
      25.6
      ```
      
-     - parameter baseWidth: The base width for the provided value.
-     - returns: A `CGFloat` that represents the proportionally sized value.
-     - date: February 17, 2016
+     - Parameters:
+         - baseWidth: The base width for the provided value.
+     - Returns: A `CGFloat` that represents the proportionally sized value.
+     - Date: February 17, 2016
     */
     func scaledToDeviceWidth(_ baseWidth: CGFloat) -> CGFloat {
         let screen = UIScreen.main
@@ -51,11 +52,12 @@ public extension Int {
      // r = 1, g = 0, b = 0, a = 0
      ```
 
-     - parameter r: The variable to write the red color value to.
-     - parameter g: The variable to write the green color value to.
-     - parameter b: The variable to write the blue color value to.
-     - parameter a: The variable to write the alpha value to.
-     - date: May 24, 2017
+     - Parameters:
+         * r: The variable to write the red color value to.
+         * g: The variable to write the green color value to.
+         * b: The variable to write the blue color value to.
+         * a: The variable to write the alpha value to.
+     - Date: May 24, 2017
      */
     func toRGBA(_ r: inout CGFloat!, _ g: inout CGFloat!, _ b: inout CGFloat!, _ a: inout CGFloat!) {
         if self > 0xFFFFFF {

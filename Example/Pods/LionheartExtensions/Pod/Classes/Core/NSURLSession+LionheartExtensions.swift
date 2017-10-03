@@ -19,14 +19,7 @@ import Foundation
 
 @available(iOS 9.0, *)
 public extension URLSession {
-    /**
-     Cancel all tasks associated with the `NSURLSession`.
-
-     - parameter completion: A block to be called after all of the tasks have been cancelled.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
-     */
+    /// Cancels all `URLSession` tasks associated with `self`.
     func cancelAllTasks(withCompletion completion: @escaping () -> Void) {
         getAllTasks { tasks in
             for task in tasks {

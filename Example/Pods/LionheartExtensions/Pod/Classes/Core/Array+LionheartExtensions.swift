@@ -18,6 +18,7 @@
 import Foundation
 
 public extension Array {
+    /// Returns an iterator that splits `self` into chunks of `Array<Element>`, each with `size` elements.
     func chunks(_ size: Int) -> AnyIterator<[Element]> {
         if size == 0 {
             return AnyIterator {

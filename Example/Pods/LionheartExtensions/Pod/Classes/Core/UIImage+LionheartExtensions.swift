@@ -29,12 +29,9 @@ public enum UIImageSaveError: Error {
 
 public extension UIImage {
     /**
-     Initialize a `UIImage` as a screenshot of the provided `UIView`.
+     Creates a `UIImage` screenshot of the provided `UIView`.
 
-     - parameter view: The `UIView` to take the screenshot of.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: March 9, 2016
+     - Date: March 9, 2016
      */
     convenience init?(_ view: UIView) {
         let bounds = view.bounds
@@ -53,34 +50,34 @@ public extension UIImage {
     }
 
     /**
-     Initialize a `UIImage` with a base64 data URL.
+     Creates a `UIImage` from a base64-encoded `String`.
 
-     - parameter view: The `UIView` to take the screenshot of.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: March 9, 2016
+     - Date: March 9, 2016
      */
     convenience init?(base64DataURLString: String?) {
-        guard let base64DataURLString = base64DataURLString, base64DataURLString == "" else {
+        guard let base64DataURLString = base64DataURLString,
+            base64DataURLString == "",
+            let range = base64DataURLString.range(of: "base64,") else {
             return nil
         }
 
-        guard let range = base64DataURLString.range(of: "base64,"),
-            let data = Data(base64Encoded: base64DataURLString.substring(from: base64DataURLString.characters.index(range.upperBound, offsetBy: 1)), options: []) else {
-                return nil
+        let index = base64DataURLString.characters.index(range.upperBound, offsetBy: 1)
+        let result = String(base64DataURLString[index...])
+
+        guard let data = Data(base64Encoded: result, options: []) else {
+            return nil
         }
 
         self.init(data: data)
     }
 
     /**
-     Return a new image with the provided color blended into it.
+     Return a `UIImage` with the provided color blended into it.
      
-     - parameter color: The color to blend into the image.
-     - returns: A `UIImage` with the color applied as a tint.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Parameters:
+         - color: The color to blend into the image.
+
+     - Date: February 17, 2016
      */
     func image(withColor color: UIColor) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -102,13 +99,12 @@ public extension UIImage {
     }
     
     /**
-     Return a new image with the alpha applied to the current one.
+     Return a `UIImage` with an alpha applied to `self`.
      
-     - parameter alpha: A float specifying the alpha level of the generated image.
-     - returns: A `UIImage` with the alpha applied.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Parameters:
+         * alpha: A float specifying the alpha level of the generated image.
+     - Returns: A `UIImage` with the alpha applied.
+     - Date: February 17, 2016
      */
     func image(withAlpha alpha: Float) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
@@ -122,35 +118,29 @@ public extension UIImage {
     }
     
     /**
-     Crop a given image to the specified `CGRect`.
+     Returns a `UIImage` cropped to the dimensions of the specified `CGRect`.
      
      - parameter rect: the `CGRect` to crop the image to.
-     - returns: A `UIImage` with the crop applied.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     func imageByCroppingToRect(_ rect: CGRect) -> UIImage? {
         guard let CIImage = ciImage else {
             return nil
         }
 
-        let image = CIImage.cropping(to: rect)
+        let image = CIImage.cropped(to: rect)
         return UIImage(ciImage: image)
     }
 
     /**
-     Return a screenshot of the current screen as a `UIImage`.
-     
-     - returns: The screenshot represented as a `UIImage`.
-     - note:
+     Returns a screenshot of the current screen as a `UIImage`.
+
+     - Note:
         Original Source: [Apple Developer Documentation](https://developer.apple.com/library/ios/qa/qa1703/_index.html#//apple_ref/doc/uid/DTS40010193)
     
         Edited By: [http://stackoverflow.com/a/8017292/39155](http://stackoverflow.com/a/8017292/39155)
 
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     class func screenshot() -> UIImage? {
         let imageSize = UIScreen.main.bounds.size
@@ -196,7 +186,7 @@ public extension UIImage {
     }
 
     /**
-     Save the image to a file using the given parameters.
+     Saves `self` to a file.
      
      ```
      image.saveToFile("image.png", format: .PNG)
@@ -208,9 +198,7 @@ public extension UIImage {
      image.saveToFile("image.jpg", format: .JPEG(0.9))
      ```
 
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: July 20, 2016
+     - Date: July 20, 2016
      */
     func saveToFile(_ path: String, format: UIImageFormat) throws {
         let data: Data?
@@ -226,11 +214,9 @@ public extension UIImage {
     }
 
     /**
-     Save the image to the user's camera roll.
+     Saves `self` to the camera roll.
 
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: July 20, 2016
+     - Date: July 20, 2016
      */
     @available(iOS 9.0, *)
     func saveToCameraRoll(_ completion: ((Bool, NSError?) -> Void)?) throws {
@@ -248,9 +234,9 @@ public extension UIImage {
     }
 
     /**
-     The average color of the image.
+     The average color of `self`.
 
-     - date: May 24, 2017
+     - Date: May 24, 2017
      */
     var averageColor: UIColor? {
         guard let ciImage = CIImage(image: self) else {
@@ -262,7 +248,7 @@ public extension UIImage {
             kCIInputExtentKey: CIVector(cgRect: ciImage.extent)
         ]
 
-        let image = ciImage.applyingFilter("CIAreaAverage", withInputParameters: parameters)
+        let image = ciImage.applyingFilter("CIAreaAverage", parameters: parameters)
         guard let (r, g, b, a) = image.rgbValues(atPoint: CGPoint(x: 1, y: 1)) else {
             return nil
         }
@@ -270,7 +256,12 @@ public extension UIImage {
         return UIColor(.RGBA(Int(r), Int(g), Int(b), Float(a) / 255.0))
     }
 
-    func resizedImage(withScale: Float) -> UIImage? {
+    /**
+     Returns a `UIImage` that is a copy of `self` adjusted by the scaling factor.
+
+     - Warning: Do not use. Incomplete implementation.
+     */
+    private func resizedImage(withScale: Float) -> UIImage? {
         let _size = size.applying(CGAffineTransform(scaleX: scale, y: scale))
         let hasAlpha = false
 

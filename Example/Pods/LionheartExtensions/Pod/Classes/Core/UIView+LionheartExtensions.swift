@@ -19,20 +19,14 @@ import Foundation
 
 public typealias LayoutDictionary = [String: Any]
 
-/**
- Auto Layout and general utility methods for `UIView`.
- 
- - author: Daniel Loewenherz
- - copyright: ©2016 Lionheart Software LLC
- - date: February 18, 2016
- */
+/// Auto Layout and general utility methods for `UIView`.
 public extension UIView {
     /**
      Remove all subviews of the calling `UIView`.
 
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     func removeSubviews() {
         for subview in subviews {
@@ -45,7 +39,7 @@ public extension UIView {
 
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: March 9, 2016
+     - Date: March 9, 2016
      */
     @available(iOS 9, *)
     func centerOnXAxis(width: CGFloat? = nil) {
@@ -63,7 +57,7 @@ public extension UIView {
 
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: March 9, 2016
+     - Date: March 9, 2016
      */
     @available(iOS 9, *)
     func centerOnYAxis(height: CGFloat? = nil) {
@@ -82,7 +76,7 @@ public extension UIView {
      - parameter height: A `Float` specifying the view's height.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func setHeight(_ height: CGFloat) {
@@ -95,7 +89,7 @@ public extension UIView {
      - parameter width: A `Float` specifying the view's width.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func setWidth(_ width: CGFloat) {
@@ -108,7 +102,7 @@ public extension UIView {
      - parameter size: A `CGSize` specifying the view's size.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9.0, *)
     func setContentSize(_ size: CGSize) {
@@ -132,7 +126,7 @@ public extension UIView {
 
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func fillWidthOfSuperview() {
@@ -144,7 +138,7 @@ public extension UIView {
      
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func fillHeightOfSuperview() {
@@ -157,7 +151,7 @@ public extension UIView {
      - parameter margin: A `CGFloat` representing the horizontal margin.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func fillWidthOfSuperview(margin: CGFloat) {
@@ -175,7 +169,7 @@ public extension UIView {
      - parameter margin: A `CGFloat` representing the vertical margin.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func fillHeightOfSuperview(margin: CGFloat) {
@@ -194,7 +188,7 @@ public extension UIView {
      - parameter margin: A `CGFloat` representing the vertical margin.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @available(iOS 9, *)
     func fillSuperview(_ axis: UILayoutConstraintAxis? = nil, margin: CGFloat = 0) {
@@ -232,7 +226,7 @@ public extension UIView {
      - parameter format: The format specification for the constraints. For more information, see Visual Format Language in Auto Layout Guide.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @discardableResult
     func addVisualFormatConstraints(_ format: String, metrics: LayoutDictionary? = nil) -> [NSLayoutConstraint] {
@@ -248,7 +242,7 @@ public extension UIView {
      - parameter views: A dictionary of views that appear in the visual format string. The keys must be the string values used in the visual format string, and the values must be the view objects.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     @discardableResult
     class func addVisualFormatConstraints(_ format: String, metrics: LayoutDictionary? = nil, views: LayoutDictionary) -> [NSLayoutConstraint] {
@@ -263,10 +257,10 @@ public extension UIView {
     Return the given distance from a view to a specified `CGPoint`.
     
     - parameter point: The `CGPoint` to measure the distance to.
-    - returns: A `Float` representing the distance to the specified `CGPoint`.
+    - Returns: A `Float` representing the distance to the specified `CGPoint`.
     - author: Daniel Loewenherz
     - copyright: ©2016 Lionheart Software LLC
-    - date: February 17, 2016
+    - Date: February 17, 2016
     */
     func distance(toPoint point: CGPoint) -> Float {
         if frame.contains(point) {
@@ -299,10 +293,10 @@ public extension UIView {
     /**
     Returns a 1x1 `CGRect` in the center of the calling `UIView`.
 
-    - returns: A 1x1 `CGRect`.
+    - Returns: A 1x1 `CGRect`.
     - author: Daniel Loewenherz
     - copyright: ©2016 Lionheart Software LLC
-    - date: March 9, 2016
+    - Date: March 9, 2016
     */
     var centerRect: CGRect {
         return CGRect(x: center.x, y: center.y, width: 1, height: 1)
@@ -326,10 +320,10 @@ public extension UIView {
      
      `labels` will contain both `label1` and `label2`.
 
-     - returns: An `Array` of `UIView`s of type `T`.
+     - Returns: An `Array` of `UIView`s of type `T`.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: March 9, 2016
+     - Date: March 9, 2016
      */
     func descendantViewsOfType<T>(passingTest test: (T) -> Bool = { _ in true }) -> [T] {
         var views: [T] = []
@@ -346,10 +340,10 @@ public extension UIView {
     /**
      This method simply returns the last object in `descendantViewsOfType(passingTest:)`.
 
-     - returns: A view of type `T`.
+     - Returns: A view of type `T`.
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: March 9, 2016
+     - Date: March 9, 2016
      */
     func lastDescendantViewOfType<T>(passingTest test: (T) -> Bool = { i in true }) -> T? {
         return descendantViewsOfType(passingTest: test).last

@@ -17,43 +17,43 @@
 
 import Foundation
 
+/// Helper methods for `UIViewController`.
 public extension UIViewController {
     /**
      Returns an optional with the top-level `UIViewController`.
      
-     - returns: The active `UIViewController`, if it can be found.
-     - date: February 17, 2016
+     - Returns: The active `UIViewController`, if it can be found.
+     - Date: February 17, 2016
      */
     class var topViewController: UIViewController? {
-        return topViewControllerWithRootViewController(UIApplication.shared.keyWindow?.rootViewController)
+        return UIApplication.shared.keyWindow?.rootViewController?.topViewController
     }
 
     /**
-     Return an optional with the top-level `UIViewController` for the provided `UIViewController`.
-     
-     - returns: The active `UIViewController`, if it can be found.
-     - date: February 17, 2016
+     The top-level `UIViewController` within the hierarchy of `self`'s stack.
+
+     - Date: February 17, 2016
      */
-    class func topViewControllerWithRootViewController(_ rootViewController: UIViewController?) -> UIViewController? {
-        switch rootViewController {
+    var topViewController: UIViewController? {
+        switch self {
         case let tabBarController as UITabBarController:
-            return topViewControllerWithRootViewController(tabBarController.selectedViewController)
+            return tabBarController.selectedViewController?.topViewController
 
         case let navigationController as UINavigationController:
-            return topViewControllerWithRootViewController(navigationController.visibleViewController)
+            return navigationController.visibleViewController?.topViewController
 
         case let splitViewController as UISplitViewController:
-            return topViewControllerWithRootViewController(splitViewController.viewControllers[1])
+            return splitViewController.viewControllers[0].topViewController
 
-        case let controller where controller == rootViewController?.presentedViewController:
+        case let controller where controller == presentedViewController:
             if controller is UIAlertController {
                 return controller
             } else {
-                return topViewControllerWithRootViewController(controller)
+                return controller.topViewController
             }
 
         default:
-            return rootViewController
+            return self
         }
     }
 }

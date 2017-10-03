@@ -19,12 +19,9 @@ import Foundation
 
 public extension UIScreen {
     /**
-     Return a view snapshot containing the status bar.
+     A view snapshot containing the status bar.
 
-     - returns: The `UIView` snapshot.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     var statusBarView: UIView? {
         let view = snapshotView(afterScreenUpdates: true)

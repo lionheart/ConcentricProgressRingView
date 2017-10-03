@@ -20,12 +20,7 @@ import Foundation
 let fontDisplayNameRegularExpression = try! NSRegularExpression(pattern: "([a-z])([A-Z])", options: [])
 
 public extension UIFont {
-    /**
-     Returns a display name for a given `UIFont`.
-
-     - returns: A `String` representing the font name.
-     - date: February 17, 2016
-     */
+    /// The display name for a given `UIFont`.
     var displayName: String {
         let _fontName = NSMutableString(string: fontName)
         fontDisplayNameRegularExpression.replaceMatches(in: _fontName, options: [], range: _fontName.range, withTemplate: "$1 $2")

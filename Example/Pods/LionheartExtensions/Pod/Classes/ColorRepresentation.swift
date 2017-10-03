@@ -8,13 +8,7 @@
 
 import Foundation
 
-/**
- An easy way to represent colors through hex, RGB, and RGBA values.
-
- - author: Daniel Loewenherz
- - copyright: ©2016 Lionheart Software LLC
- - date: December 13, 2016
- */
+/// An easy way to represent colors through hex, RGB, and RGBA values.
 public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArrayLiteral, ExpressibleByStringLiteral {
     public typealias IntegerLiteralType = Int
     public typealias Element = Float
@@ -23,15 +17,40 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias StringLiteralType = String
 
+    /// A representation of a hexadecimal-encoded color
     case HEX(Int)
+
+    /// A representation of a RGB-encoded color
     case RGB(Int, Int, Int)
+
+    /// A representation of a RGB-encoded color, with an alpha value
     case RGBA(Int, Int, Int, Float)
+
+    /// An invalid color
     case invalid
 
+    /**
+     Creates a `ColorRepresentation` with the provided hexadecimal value.
+
+     ```
+     let red: ColorRepresentation = 0xFF0000
+     ```
+
+     - SeeAlso: `UIColor.init(_:)`
+     */
     public init(integerLiteral value: IntegerLiteralType) {
         self = .HEX(value)
     }
 
+    /**
+     Creates a `ColorRepresentation` from 3 or 4 integer parameters.
+
+     ```
+     let red: ColorRepresentation = [255, 0, 0]
+     ```
+
+     - SeeAlso: `UIColor.init(_:)`
+     */
     public init(arrayLiteral elements: Element...) {
         let intElements = elements.map { Int($0) }
         switch elements.count {
@@ -48,7 +67,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
 
         let stringValue = string as NSString
         if let match = hexColorRegularExpression.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
-            let group = stringValue.substring(with: match.rangeAt(1))
+            let group = stringValue.substring(with: match.range(at: 1))
 
             if let integerValue = Int(group, radix: 16) {
                 self = .HEX(integerValue)
@@ -62,12 +81,12 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
 
         for regex in [rgbColorRegularExpression, rgbaColorRegularExpression] {
             if let match = regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
-                _r = stringValue.substring(with: match.rangeAt(1))
-                _g = stringValue.substring(with: match.rangeAt(2))
-                _b = stringValue.substring(with: match.rangeAt(3))
+                _r = stringValue.substring(with: match.range(at: 1))
+                _g = stringValue.substring(with: match.range(at: 2))
+                _b = stringValue.substring(with: match.range(at: 3))
 
                 if match.numberOfRanges == 5 {
-                    _a = stringValue.substring(with: match.rangeAt(4))
+                    _a = stringValue.substring(with: match.range(at: 4))
                 }
             }
         }

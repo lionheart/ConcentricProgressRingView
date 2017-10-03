@@ -9,6 +9,7 @@
 import UIKit
 
 public extension UIDevice {
+    /// The current device's UUID
     static var UUIDString: String? {
         return current.identifierForVendor?.uuidString
     }

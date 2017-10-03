@@ -18,7 +18,11 @@
 import Foundation
 
 public extension Optional where Wrapped == String {
-    /** Coerce empty strings to nil. */
+    /**
+     A string identifical to `self` if not an empty string, `nil` otherwise.
+
+     - SeeAlso: `String.nilIfEmpty`
+     */
     var nilIfEmpty: String? {
         guard let value = self, value != "" else {
             return nil

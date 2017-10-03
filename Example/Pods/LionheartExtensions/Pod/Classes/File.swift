@@ -23,8 +23,7 @@ final class File {
         self.filename = filename
     }
 
-    /**
-     */
+    /// The file's full path contained with the documents directory, or `nil` if it does not exist.
     lazy var documentsPath: String? = {
         let paths: [NSString] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [NSString]
         guard let path = paths.first,
@@ -35,6 +34,7 @@ final class File {
         return path.appendingPathComponent(filename)
     }()
 
+    /// The file's full path contained within the bundle, or `nil` if `filename` is `nil`.
     var bundlePath: String? {
         let bundle = Bundle.main
         guard let filename = filename else {
@@ -45,6 +45,7 @@ final class File {
         return bundle.path(forResource: components[0], ofType: components[1])
     }
 
+    /// Returns the file's contents as a `String`.
     func read() -> String? {
         guard let path = documentsPath ?? bundlePath else {
             return nil
@@ -53,6 +54,7 @@ final class File {
         return try? String(contentsOfFile: path, encoding: .utf8)
     }
 
+    /// A boolean that indicates whether `self` is contained within the app bundle.
     var existsInBundle: Bool {
         guard let path = bundlePath else {
             return false
@@ -61,6 +63,7 @@ final class File {
         return FileManager.default.fileExists(atPath: path)
     }
 
+    /// A boolean that indicates whether `self` is contained within the documents directory.
     var existsInDocuments: Bool {
         guard let path = documentsPath else {
             return false

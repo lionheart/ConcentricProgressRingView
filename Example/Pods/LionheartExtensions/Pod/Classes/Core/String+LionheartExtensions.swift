@@ -45,20 +45,16 @@ public protocol LHSStringType {
     /**
      Conforming types must provide a getter for the length of the string.
      
-     - returns: An `Int` representing the "length" of the string (understood that this can differ based on encoding).
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Returns: An `Int` representing the "length" of the string (understood that this can differ based on encoding).
+     - Date: February 17, 2016
      */
     var length: Int { get }
 
     /**
      Conforming types must provide a method to get the full range of the string.
      
-     - returns: An `NSRange` representing the entire string.
-     - author: Daniel Loewenherz
-     - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Returns: An `NSRange` representing the entire string.
+     - Date: February 17, 2016
      */
     var range: NSRange { get }
 
@@ -78,7 +74,11 @@ extension NSString: LHSStringType {}
 extension NSAttributedString: LHSStringType {}
 
 public extension String {
-    /// Coerce empty strings to nil.
+    /**
+     A string identifical to `self` if not an empty string, `nil` otherwise.
+
+     - SeeAlso: `Optional.nilIfEmpty`
+     */
     var nilIfEmpty: String? {
         guard self != "" else {
             return nil
@@ -87,45 +87,29 @@ public extension String {
         return self
     }
 
-    /**
-     Returns an `NSRange` indicating the length of the `String`.
-     
-     - returns: An `NSRange`
-     */
-    var range: NSRange {
-        return NSMakeRange(0, characters.count)
+    /// The length of the current string.
+    var length: Int {
+        return NSString(string: self).length
     }
 
-    /**
-     Converts an `NSRange` for the current `String` to a a type of `Range<String.Index>`.
+    /// An `NSRange` encompassing all of `self`.
+    var range: NSRange {
+        return NSMakeRange(0, length)
+    }
 
-     - returns: A range of type `Range<String.Index>`
-     */
+    /// Returns a `Range<String.Index>` equivalent to the provided `NSRange` for `self`.
     func toRange(_ range: NSRange) -> Range<String.Index> {
         let start = characters.index(startIndex, offsetBy: range.location)
         let end = characters.index(start, offsetBy: range.length)
         return start..<end
     }
 
-    /**
-     - returns: Returns the length of the current string.
-     */
-    var length: Int {
-        return NSString(string: self).length
-    }
-
-    /**
-     Trim all characters from the string in the specified character set.
-     
-     - parameter characterSet: a `CharacterSet` specifying which characters to trim from the string
-     */
+    /// Trims all characters from the string in the specified `CharacterSet`.
     mutating func trim(_ characterSet: CharacterSet) {
         self = self.trimmingCharacters(in: characterSet)
     }
 
-    /**
-     URL encode the current string.
-     */
+    /// URL encode the current string.
     mutating func URLEncode() {
         guard let string = URLEncodedString else {
             return
@@ -142,20 +126,16 @@ public extension String {
         self = stringByConverting(toNamingFormat: .underscores)
     }
 
-    /**
-     A copy of the current `String` with the first letter lowercased.
-     */
+    /// A copy of `self` with the first letter lowercased.
     var stringByLowercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
-        return substring(to: start).lowercased() + substring(with: start..<endIndex)
+        return self[...start].lowercased() + self[start..<endIndex]
     }
 
-    /**
-     A copy of the current `String` with the first letter uppercased.
-     */
+    /// A copy of `self` with the first letter uppercased.
     var stringByUppercasingFirstLetter: String {
         let start = characters.index(after: startIndex)
-        return substring(to: start).uppercased() + substring(with: start..<endIndex)
+        return self[...start].uppercased() + self[start..<endIndex]
     }
 
     /**
@@ -231,7 +211,7 @@ public extension NSString {
     /**
      An `NSRange` indicating the length of the `NSString`.
      
-     - returns: An `NSRange`
+     - Returns: An `NSRange`
      */
     var range: NSRange {
         return String(self).range
@@ -258,10 +238,10 @@ public extension NSAttributedString {
     /**
      Returns an `NSRange` indicating the length of the `NSAttributedString`.
      
-     - returns: An `NSRange`
+     - Returns: An `NSRange`
      - author: Daniel Loewenherz
      - copyright: ©2016 Lionheart Software LLC
-     - date: February 17, 2016
+     - Date: February 17, 2016
      */
     var range: NSRange {
         return string.range
@@ -285,20 +265,20 @@ public extension NSAttributedString {
 }
 
 public extension NSMutableAttributedString {
-    func addString(withAttributes string: String, attributes: [String: Any]) {
+    func addString(withAttributes string: String, attributes: [NSAttributedStringKey: Any]) {
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         append(attributedString)
     }
     
-    func addAttribute(_ name: String, value: Any) {
+    func addAttribute(_ name: NSAttributedStringKey, value: Any) {
         addAttribute(name, value: value, range: range)
     }
     
-    func addAttributes(_ attributes: [String: Any]) {
+    func addAttributes(_ attributes: [NSAttributedStringKey: Any]) {
         addAttributes(attributes, range: range)
     }
     
     func removeAttribute(_ name: String) {
-        removeAttribute(name, range: range)
+        removeAttribute(NSAttributedStringKey(rawValue: name), range: range)
     }
 }
