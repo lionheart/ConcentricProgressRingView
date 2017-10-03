@@ -26,7 +26,7 @@ public struct ProgressRing {
 }
 
 open class ProgressRingLayer: CAShapeLayer {
-    var completion: ((Void) -> Void)?
+    var completion: (() -> Void)?
 
     open var progress: CGFloat? {
         get {
@@ -60,7 +60,7 @@ open class ProgressRingLayer: CAShapeLayer {
         super.init(layer: layer)
     }
 
-    open func setProgress(_ progress: CGFloat, duration: CGFloat, completion: ((Void) -> Void)? = nil) {
+    open func setProgress(_ progress: CGFloat, duration: CGFloat, completion: (() -> Void)? = nil) {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = strokeEnd
         animation.toValue = progress

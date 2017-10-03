@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func randomAnimation(_ timer: Timer?) {
+    @objc func randomAnimation(_ timer: Timer?) {
         guard let index = timer?.userInfo as? Int else {
             return
         }
