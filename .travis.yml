@@ -1,6 +1,6 @@
 script:
-- set -o pipefail && xcodebuild test -workspace Example/ConcentricProgressRingView.xcworkspace -scheme ConcentricProgressRingView-Example -destination "platform=iOS Simulator,name=iPhone SE,OS=10.3.1" -destination-timeout 1 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/ConcentricProgressRingView.xcworkspace -scheme ConcentricProgressRingView-Example -destination "platform=iOS Simulator,name=iPhone X" | xcpretty
 - pod lib lint
 
 language: objective-c
-osx_image: xcode8.3
+osx_image: xcode9.1
