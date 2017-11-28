@@ -47,26 +47,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "ConcentricProgressRingView_Tests.xctest"
-               BlueprintName = "ConcentricProgressRingView_Tests"
-               ReferencedContainer = "container:ConcentricProgressRingView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37C0F59E1FCD0416000DB42E"
-               BuildableName = "ConcentricProgressRingView_ExampleUITests.xctest"
-               BlueprintName = "ConcentricProgressRingView_ExampleUITests"
-               ReferencedContainer = "container:ConcentricProgressRingView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "37C0F5AC1FCD042B000DB42E"
                BuildableName = "ConcentricProgressRingView_ExampleTests.xctest"
                BlueprintName = "ConcentricProgressRingView_ExampleTests"
