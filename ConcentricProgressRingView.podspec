@@ -6,9 +6,13 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.author           = { 'Dan Loewenherz' => 'dan@lionheartsw.com' }
   s.source           = { :git => 'https://github.com/lionheart/ConcentricProgressRingView.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/lionheart'
+  s.social_media_url = 'https://twitter.com/lionheartsw'
 
   s.ios.deployment_target = '10.3'
+
+  s.pod_target_xcconfig = {
+    'SWIFT_VERSION' => '4.0'
+  }
 
   s.source_files = 'ConcentricProgressRingView/Classes/**/*'
   s.dependency 'LionheartExtensions'
