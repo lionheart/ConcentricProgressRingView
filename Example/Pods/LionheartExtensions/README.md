@@ -15,7 +15,7 @@
 
 LionheartExtensions uses [Semantic Versioning](http://www.semver.org).
 
-Please read the [documentation](http://lionheartsw.com/LionheartExtensions/) for further information.
+Please read the [documentation](https://code.lionheart.software/LionheartExtensions/) for further information.
 
 ## Features
 
@@ -59,7 +59,7 @@ pod "LionheartExtensions"
 
 ## Documentation
 
-See [http://lionheartsw.com/LionheartExtensions/](http://lionheartsw.com/LionheartExtensions/)
+See [https://code.lionheart.software/LionheartExtensions/](https://code.lionheart.software/LionheartExtensions/)
 
 ## License
 

@@ -66,7 +66,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
         let rgbaColorRegularExpression = try! NSRegularExpression(pattern: "^rgba\\((1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(1?[0-9]{1,2}|2[0-5][0-5]),[ ]*(0?\\.\\d+)\\)$", options: NSRegularExpression.Options())
 
         let stringValue = string as NSString
-        if let match = hexColorRegularExpression.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
+        if let match = hexColorRegularExpression.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) {
             let group = stringValue.substring(with: match.range(at: 1))
 
             if let integerValue = Int(group, radix: 16) {
@@ -80,7 +80,7 @@ public enum ColorRepresentation: ExpressibleByIntegerLiteral, ExpressibleByArray
         var _a: String?
 
         for regex in [rgbColorRegularExpression, rgbaColorRegularExpression] {
-            if let match = regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.characters.count)) {
+            if let match = regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) {
                 _r = stringValue.substring(with: match.range(at: 1))
                 _g = stringValue.substring(with: match.range(at: 2))
                 _b = stringValue.substring(with: match.range(at: 3))

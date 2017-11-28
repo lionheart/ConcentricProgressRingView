@@ -98,10 +98,9 @@ public extension String {
     }
 
     /// Returns a `Range<String.Index>` equivalent to the provided `NSRange` for `self`.
-    func toRange(_ range: NSRange) -> Range<String.Index> {
-        let start = characters.index(startIndex, offsetBy: range.location)
-        let end = characters.index(start, offsetBy: range.length)
-        return start..<end
+    @available(*, deprecated)
+    func toRange(_ range: NSRange) -> Range<String.Index>? {
+        return Range(range, in: self)
     }
 
     /// Trims all characters from the string in the specified `CharacterSet`.
@@ -128,14 +127,14 @@ public extension String {
 
     /// A copy of `self` with the first letter lowercased.
     var stringByLowercasingFirstLetter: String {
-        let start = characters.index(after: startIndex)
-        return self[...start].lowercased() + self[start..<endIndex]
+        let start = index(after: startIndex)
+        return self[..<start].lowercased() + self[start..<endIndex]
     }
 
     /// A copy of `self` with the first letter uppercased.
     var stringByUppercasingFirstLetter: String {
-        let start = characters.index(after: startIndex)
-        return self[...start].uppercased() + self[start..<endIndex]
+        let start = index(after: startIndex)
+        return self[..<start].uppercased() + self[start..<endIndex]
     }
 
     /**
@@ -178,7 +177,7 @@ public extension String {
         case .pascalCase:
             var uppercaseNextCharacter = false
             var result = ""
-            for character in characters {
+            for character in self {
                 if character == "_" {
                     uppercaseNextCharacter = true
                 } else {

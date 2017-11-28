@@ -29,21 +29,40 @@ public enum UIImageSaveError: Error {
 
 public extension UIImage {
     /**
+     Creates an image based on a color.
+
+     - Date: November 20, 2017
+     */
+    convenience init?(color: UIColor) {
+        let size = CGSize(width: 1, height: 1)
+        let rect = CGRect(origin: .zero, size: size)
+
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+
+        let renderer = UIGraphicsImageRenderer(size: size, format: format)
+        let data = renderer.pngData { context in
+            color.setFill()
+            context.fill(rect)
+        }
+
+        self.init(data: data)
+    }
+
+    /**
      Creates a `UIImage` screenshot of the provided `UIView`.
 
      - Date: March 9, 2016
      */
-    convenience init?(_ view: UIView) {
-        let bounds = view.bounds
+    convenience init?(view: UIView, scale: CGFloat? = nil) {
+        let size = view.bounds.size
 
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
-        view.drawHierarchy(in: bounds, afterScreenUpdates: true)
-        let _image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = scale ?? view.traitCollection.displayScale
 
-        guard let image = _image,
-            let data = UIImagePNGRepresentation(image) else {
-                return nil
+        let renderer = UIGraphicsImageRenderer(size: size, format: format)
+        let data = renderer.pngData { context in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         }
 
         self.init(data: data)
@@ -52,16 +71,27 @@ public extension UIImage {
     /**
      Creates a `UIImage` from a base64-encoded `String`.
 
+     - Date: November 20, 2017
      - Date: March 9, 2016
      */
     convenience init?(base64DataURLString: String?) {
         guard let base64DataURLString = base64DataURLString,
-            base64DataURLString == "",
-            let range = base64DataURLString.range(of: "base64,") else {
-            return nil
+            base64DataURLString != "" else {
+                return nil
         }
 
-        let index = base64DataURLString.characters.index(range.upperBound, offsetBy: 1)
+        let range: Range<String.Index>
+        let offset: Int
+        if let _range = base64DataURLString.range(of: "base64,") {
+            range = _range
+            offset = 1
+        } else {
+            // MARK: TODO
+            range = Range(NSMakeRange(0, 0), in: base64DataURLString)!
+            offset = 0
+        }
+
+        let index = base64DataURLString.index(range.upperBound, offsetBy: offset)
         let result = String(base64DataURLString[index...])
 
         guard let data = Data(base64Encoded: result, options: []) else {
