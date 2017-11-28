@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37C0F5B01FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0F5AF1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		625FE463ADA5E66145F15386 /* Pods_ConcentricProgressRingView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD47483F3E83263316C1EAA /* Pods_ConcentricProgressRingView_Example.framework */; };
+		CA81E461A9FD0B9432CDB546 /* Pods_ConcentricProgressRingView_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BBFF8FE40E32E31A42FF02 /* Pods_ConcentricProgressRingView_ExampleTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37C0F5B21FCD042B000DB42E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = ConcentricProgressRingView_Example;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17469B7C870E1F794E9775E1 /* Pods-ConcentricProgressRingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcentricProgressRingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConcentricProgressRingView_Tests/Pods-ConcentricProgressRingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3706788D1D25BD0C00B831E0 /* ConcentricProgressRingView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConcentricProgressRingView.framework; path = "../../../Library/Developer/Xcode/DerivedData/ConcentricProgressRingView-ayukgiocyqpaobbogmustcwfemcr/Build/Products/Debug-iphonesimulator/ConcentricProgressRingView/ConcentricProgressRingView.framework"; sourceTree = "<group>"; };
+		37C0F5AD1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentricProgressRingView_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C0F5AF1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentricProgressRingView_ExampleTests.swift; sourceTree = "<group>"; };
+		37C0F5B11FCD042B000DB42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5436C63E8730D10ABAAB25CA /* Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		58E921799724119A9E21545B /* Pods-ConcentricProgressRingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcentricProgressRingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConcentricProgressRingView_Example/Pods-ConcentricProgressRingView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ConcentricProgressRingView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcentricProgressRingView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,10 +48,20 @@
 		B415C04BB2D25C159A05C22A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B7931EF6607F73BEA5CE2838 /* Pods-ConcentricProgressRingView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcentricProgressRingView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConcentricProgressRingView_Tests/Pods-ConcentricProgressRingView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E171505AC28A5FE71BB00334 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F2946F70055F4A42EABF956F /* Pods-ConcentricProgressRingView_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcentricProgressRingView_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7BBFF8FE40E32E31A42FF02 /* Pods_ConcentricProgressRingView_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcentricProgressRingView_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F993201B16EC82DD46326199 /* Pods_ConcentricProgressRingView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcentricProgressRingView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		37C0F5AA1FCD042B000DB42E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81E461A9FD0B9432CDB546 /* Pods_ConcentricProgressRingView_ExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,8 +80,19 @@
 				58E921799724119A9E21545B /* Pods-ConcentricProgressRingView_Example.release.xcconfig */,
 				B7931EF6607F73BEA5CE2838 /* Pods-ConcentricProgressRingView_Tests.debug.xcconfig */,
 				17469B7C870E1F794E9775E1 /* Pods-ConcentricProgressRingView_Tests.release.xcconfig */,
+				F2946F70055F4A42EABF956F /* Pods-ConcentricProgressRingView_ExampleTests.debug.xcconfig */,
+				5436C63E8730D10ABAAB25CA /* Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		37C0F5AE1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				37C0F5AF1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.swift */,
+				37C0F5B11FCD042B000DB42E /* Info.plist */,
+			);
+			path = ConcentricProgressRingView_ExampleTests;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -63,6 +100,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ConcentricProgressRingView */,
+				37C0F5AE1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				031E97F4E0BE46B0C09EEBC2 /* Pods */,
 				C133EF527F485F95B2178185 /* Frameworks */,
@@ -73,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* ConcentricProgressRingView_Example.app */,
+				37C0F5AD1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +154,7 @@
 				3706788D1D25BD0C00B831E0 /* ConcentricProgressRingView.framework */,
 				8FD47483F3E83263316C1EAA /* Pods_ConcentricProgressRingView_Example.framework */,
 				F993201B16EC82DD46326199 /* Pods_ConcentricProgressRingView_Tests.framework */,
+				F7BBFF8FE40E32E31A42FF02 /* Pods_ConcentricProgressRingView_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +162,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		37C0F5AC1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37C0F5B61FCD042B000DB42E /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView_ExampleTests" */;
+			buildPhases = (
+				1DD8B60693DAF6CF0C05F5BC /* [CP] Check Pods Manifest.lock */,
+				37C0F5A91FCD042B000DB42E /* Sources */,
+				37C0F5AA1FCD042B000DB42E /* Frameworks */,
+				37C0F5AB1FCD042B000DB42E /* Resources */,
+				11C974A427414FF6EA0DA125 /* [CP] Embed Pods Frameworks */,
+				9A69ED98045307F6B3D674E8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37C0F5B31FCD042B000DB42E /* PBXTargetDependency */,
+			);
+			name = ConcentricProgressRingView_ExampleTests;
+			productName = ConcentricProgressRingView_ExampleTests;
+			productReference = 37C0F5AD1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		607FACCF1AFB9204008FA782 /* ConcentricProgressRingView_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView_Example" */;
@@ -148,10 +209,16 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					37C0F5AC1FCD042B000DB42E = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 63553QQ62F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 63553QQ62F;
@@ -173,11 +240,19 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* ConcentricProgressRingView_Example */,
+				37C0F5AC1FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		37C0F5AB1FCD042B000DB42E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +266,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11C974A427414FF6EA0DA125 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DD8B60693DAF6CF0C05F5BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConcentricProgressRingView_ExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2C3C1F016294790D384E9860 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +342,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9A69ED98045307F6B3D674E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0132CBC779D0E2D6D0EA701 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +375,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		37C0F5A91FCD042B000DB42E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37C0F5B01FCD042B000DB42E /* ConcentricProgressRingView_ExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +393,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37C0F5B31FCD042B000DB42E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* ConcentricProgressRingView_Example */;
+			targetProxy = 37C0F5B21FCD042B000DB42E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -278,6 +422,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		37C0F5B41FCD042B000DB42E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2946F70055F4A42EABF956F /* Pods-ConcentricProgressRingView_ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 63553QQ62F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ConcentricProgressRingView_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lionheartsw.ConcentricProgressRingView-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcentricProgressRingView_Example.app/ConcentricProgressRingView_Example";
+			};
+			name = Debug;
+		};
+		37C0F5B51FCD042B000DB42E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5436C63E8730D10ABAAB25CA /* Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63553QQ62F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ConcentricProgressRingView_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lionheartsw.ConcentricProgressRingView-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcentricProgressRingView_Example.app/ConcentricProgressRingView_Example";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,7 +579,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7830F94FED95A33A9F1001D4 /* Pods-ConcentricProgressRingView_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63553QQ62F;
 				INFOPLIST_FILE = ConcentricProgressRingView/Info.plist;
@@ -400,7 +595,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58E921799724119A9E21545B /* Pods-ConcentricProgressRingView_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63553QQ62F;
 				INFOPLIST_FILE = ConcentricProgressRingView/Info.plist;
@@ -416,6 +610,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		37C0F5B61FCD042B000DB42E /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37C0F5B41FCD042B000DB42E /* Debug */,
+				37C0F5B51FCD042B000DB42E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ConcentricProgressRingView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -6,30 +6,40 @@
 //  Copyright © 2017 CocoaPods. All rights reserved.
 //
 
-import XCTest
+// https://github.com/Quick/Quick
 
-class ConcentricProgressRingView_ExampleTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+import Quick
+import Nimble
+import LionheartExtensions
+@testable import ConcentricProgressRingView
+
+class ConcentricProgressRingSpec: XCTestCase {
+    static let width: CGFloat = 18
+    static let margin: CGFloat = 2
+    static let radius: CGFloat = 80
+
+    static let bars: [ProgressRing] = [
+        ProgressRing(color: UIColor(.RGB(160, 255, 0)), backgroundColor: UIColor(.RGB(44, 66, 4)), width: width),
+        ProgressRing(color: UIColor(.RGB(255, 211, 0)), backgroundColor: UIColor(.RGB(85, 78, 0)), width: width),
+        ProgressRing(color: UIColor(.RGB(255, 28, 93)), backgroundColor: UIColor(.RGB(52, 0, 19)), width: width),
+        ]
+
+    func testConcentricProgressRingViewArcs() {
+        let view = ConcentricProgressRingView(center: CGPoint.zero, radius: ConcentricProgressRingSpec.radius, margin: ConcentricProgressRingSpec.margin, rings: ConcentricProgressRingSpec.bars)
+
+        expect(view.arcs.count) == 3
+        expect(view.circles.count) == 3
+        expect(view[0]) == view.arcs.first
+        expect(view[2]) == view.arcs.last
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testConcentricProgressRingViewCircles() {
+        let view = ConcentricProgressRingView(center: CGPoint.zero, radius: ConcentricProgressRingSpec.radius, margin: ConcentricProgressRingSpec.margin, rings: ConcentricProgressRingSpec.bars)
+
+        expect(view.arcs.count) == 3
+        expect(view.circles.count) == 3
+        expect(view[0]) == view.arcs.first
+        expect(view[2]) == view.arcs.last
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
+
