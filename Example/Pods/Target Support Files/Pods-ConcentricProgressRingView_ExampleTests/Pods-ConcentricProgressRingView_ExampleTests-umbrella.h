@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ConcentricProgressRingView_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ConcentricProgressRingView_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_ConcentricProgressRingView_ExampleTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ConcentricProgressRingView_ExampleTestsVersionString[];
 
