@@ -1,14 +1,16 @@
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+project 'ConcentricProgressRingView.xcodeproj'
 platform :ios, '10.3'
+use_frameworks!
 
 target 'ConcentricProgressRingView_Example' do
   pod 'ConcentricProgressRingView', :path => '../'
   pod 'LionheartExtensions'
 
-  target 'ConcentricProgressRingView_Tests' do
+  target 'ConcentricProgressRingView_ExampleTests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1'
+    pod 'Quick', '~> 1.1'
     pod 'Nimble', '~> 7.0'
   end
 end
