@@ -14,9 +14,12 @@
     "git": "https://github.com/lionheart/ConcentricProgressRingView.git",
     "tag": "2.0.0"
   },
-  "social_media_url": "https://twitter.com/lionheart",
+  "social_media_url": "https://twitter.com/lionheartsw",
   "platforms": {
     "ios": "10.3"
+  },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.0"
   },
   "source_files": "ConcentricProgressRingView/Classes/**/*",
   "dependencies": {
