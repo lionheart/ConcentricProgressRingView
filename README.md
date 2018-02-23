@@ -1,9 +1,11 @@
 ![](meta/repo-banner.png)
 [![](meta/repo-banner-bottom.png)][lionheart-url]
 
+[![CI Status][ci-badge]][travis-repo-url]
 [![Version][version-badge]][cocoapods-repo-url]
 [![License][license-badge]][cocoapods-repo-url]
 [![Platform][platform-badge]][cocoapods-repo-url]
+[![Swift][swift-badge]][swift-url]
 
 Fully customizable, circular progress bar written in Swift.
 
@@ -165,4 +167,5 @@ ConcentricProgressRingView is available under the Apache 2.0 license. See the [L
 [cocoapods-url]: http://cocoapods.org
 [cocoapods-repo-url]: http://cocoapods.org/pods/ConcentricProgressRingView
 [appetize-url]: https://appetize.io/app/xw49k81xufbqkmwdhpebkpyn58?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3&deviceColor=black
+[travis-repo-url]: https://travis-ci.org/lionheart/ConcentricProgressRingView
 
