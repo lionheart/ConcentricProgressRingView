@@ -29,7 +29,7 @@ public extension UIWindow {
      - Date: February 17, 2016
      */
     class func takeScreenshotAndSaveToPath(_ path: String) -> Bool {
-        guard let window = UIApplication.shared.keyWindow else {
+        guard let window = LionheartExtensions.sharedUIApplication?.keyWindow else {
             return false
         }
 

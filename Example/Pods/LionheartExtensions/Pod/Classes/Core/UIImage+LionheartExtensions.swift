@@ -176,17 +176,22 @@ public extension UIImage {
         let imageSize = UIScreen.main.bounds.size
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return nil
+        guard let windows = LionheartExtensions.sharedUIApplication?.windows,
+            let context = UIGraphicsGetCurrentContext() else {
+                return nil
         }
 
-        for window in UIApplication.shared.windows {
+        for window in windows {
             context.saveGState()
             context.translateBy(x: window.center.x, y: window.center.y)
             context.concatenate(window.transform)
             context.translateBy(x: -window.bounds.size.width * window.layer.anchorPoint.x, y: -window.bounds.size.height * window.layer.anchorPoint.y)
             
-            switch UIApplication.shared.statusBarOrientation {
+            guard let statusBarOrientation = LionheartExtensions.sharedUIApplication?.statusBarOrientation else {
+                continue
+            }
+            
+            switch statusBarOrientation {
             case .landscapeLeft:
                 context.rotate(by: .pi / 2)
                 context.translateBy(x: 0, y: -imageSize.width)
