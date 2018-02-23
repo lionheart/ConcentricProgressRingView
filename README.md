@@ -1,9 +1,9 @@
 ![](meta/repo-banner.png)
 [![](meta/repo-banner-bottom.png)][lionheart-url]
 
-[![Version](https://img.shields.io/cocoapods/v/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
-[![License](https://img.shields.io/cocoapods/l/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
-[![Platform](https://img.shields.io/cocoapods/p/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
+[![Version][version-badge]][cocoapods-repo-url]
+[![License][license-badge]][cocoapods-repo-url]
+[![Platform][platform-badge]][cocoapods-repo-url]
 
 Fully customizable, circular progress bar written in Swift.
 
@@ -11,7 +11,7 @@ Fully customizable, circular progress bar written in Swift.
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first. You can also view the example app at [Appetize.io](https://appetize.io/app/xw49k81xufbqkmwdhpebkpyn58?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3&deviceColor=black).
+To run the example project, clone the repo, and run `pod install` from the Example directory first. You can also view the example app at [Appetize.io][appetize-url].
 
 ### Usage
 
@@ -129,7 +129,7 @@ for ring in progressRingView {
 
 ## Installation
 
-ConcentricProgressRingView is available through [CocoaPods](http://cocoapods.org). To install
+ConcentricProgressRingView is available through [CocoaPods][cocoapods-url]. To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -150,5 +150,19 @@ Dan Loewenherz, dan@lionheartsw.com
 
 ConcentricProgressRingView is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.
 
+<!-- Images -->
+
+[ci-badge]: https://img.shields.io/travis/lionheart/ConcentricProgressRingView.svg?style=flat
+[version-badge]: https://img.shields.io/cocoapods/v/ConcentricProgressRingView.svg?style=flat
+[license-badge]: https://img.shields.io/cocoapods/l/ConcentricProgressRingView.svg?style=flat
+[platform-badge]: https://img.shields.io/cocoapods/p/ConcentricProgressRingView.svg?style=flat
+[downloads-badge]: https://img.shields.io/cocoapods/dt/ConcentricProgressRingView.svg?style=flat
+[downloads-monthly-badge]: https://img.shields.io/cocoapods/dm/ConcentricProgressRingView.svg?style=flat
+
+<!-- Links -->
+
 [lionheart-url]: https://lionheartsw.com/
+[cocoapods-url]: http://cocoapods.org
+[cocoapods-repo-url]: http://cocoapods.org/pods/ConcentricProgressRingView
+[appetize-url]: https://appetize.io/app/xw49k81xufbqkmwdhpebkpyn58?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3&deviceColor=black
 
