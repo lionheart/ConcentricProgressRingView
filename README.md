@@ -160,6 +160,7 @@ ConcentricProgressRingView is available under the Apache 2.0 license. See the [L
 [platform-badge]: https://img.shields.io/cocoapods/p/ConcentricProgressRingView.svg?style=flat
 [downloads-badge]: https://img.shields.io/cocoapods/dt/ConcentricProgressRingView.svg?style=flat
 [downloads-monthly-badge]: https://img.shields.io/cocoapods/dm/ConcentricProgressRingView.svg?style=flat
+[swift-badge]: http://img.shields.io/badge/swift-4-blue.svg?style=flat
 
 <!-- Links -->
 
@@ -168,4 +169,5 @@ ConcentricProgressRingView is available under the Apache 2.0 license. See the [L
 [cocoapods-repo-url]: http://cocoapods.org/pods/ConcentricProgressRingView
 [appetize-url]: https://appetize.io/app/xw49k81xufbqkmwdhpebkpyn58?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3&deviceColor=black
 [travis-repo-url]: https://travis-ci.org/lionheart/ConcentricProgressRingView
+[swift-url]: https://swift.org
 
