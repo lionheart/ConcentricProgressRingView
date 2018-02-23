@@ -10,7 +10,7 @@ target 'ConcentricProgressRingView_Example' do
   target 'ConcentricProgressRingView_ExampleTests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.1'
-    pod 'Nimble', '~> 7.0'
+    pod 'Quick', '~> 1'
+    pod 'Nimble', '~> 7'
   end
 end
