@@ -1,4 +1,5 @@
-# ConcentricProgressRingView
+![](meta/repo-banner.png)
+[![](meta/repo-banner-bottom.png)][lionheart-url]
 
 [![Version](https://img.shields.io/cocoapods/v/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
 [![License](https://img.shields.io/cocoapods/l/ConcentricProgressRingView.svg?style=flat)](http://cocoapods.org/pods/ConcentricProgressRingView)
@@ -148,3 +149,6 @@ Dan Loewenherz, dan@lionheartsw.com
 ## License
 
 ConcentricProgressRingView is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.
+
+[lionheart-url]: https://lionheartsw.com/
+
