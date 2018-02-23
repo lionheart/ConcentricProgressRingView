@@ -7,7 +7,7 @@
 
 Fully customizable, circular progress bar written in Swift.
 
-![](animation.gif)
+<img src="animation.gif" height="150" width="150" />
 
 ## Example
 
