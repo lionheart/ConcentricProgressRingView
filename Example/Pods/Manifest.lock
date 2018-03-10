@@ -1,9 +1,9 @@
 PODS:
   - ConcentricProgressRingView (2.0.0):
     - LionheartExtensions
-  - LionheartExtensions (3.11.0):
-    - LionheartExtensions/Core (= 3.11.0)
-  - LionheartExtensions/Core (3.11.0)
+  - LionheartExtensions (3.11.4):
+    - LionheartExtensions/Core (= 3.11.4)
+  - LionheartExtensions/Core (3.11.4)
   - Nimble (7.0.3)
   - Quick (1.2.0)
 
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ConcentricProgressRingView: b7994d3cdb3421c8273750a18f4efa171e628a71
-  LionheartExtensions: 00e1a280db11eccd903250175c497fd8007f626f
+  LionheartExtensions: 1cb1f17f3d75ff48757d6aeeb40fbe9f9516e300
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
