@@ -1,0 +1,11 @@
+author: "Lionheart Software"
+author_url: "https://lionheartsw.com"
+github_url: "https://github.com/lionheart/ConcentricProgressRingView"
+github_file_prefix: "https://github.com/lionheart/ConcentricProgressRingView/tree/3.11.4"
+xcodebuild_arguments: ["-workspace", "Example/ConcentricProgressRingView.xcworkspace", "-scheme", "ConcentricProgressRingView"]
+readme: "README.md"
+copyright: "&copy; 2016-2017 Lionheart Software LLC"
+theme: fullwidth
+head: "<style type='text/css'>body { font-family: -apple-system !important; }</style>"
+use_safe_filenames: true
+
