@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ConcentricProgressRingView  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    <style type='text/css'>body { font-family: -apple-system !important; }</style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="ConcentricProgressRingView  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          ConcentricProgressRingView Docs
+        </a>
+         (5% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/lionheart/ConcentricProgressRingView">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">ConcentricProgressRingView Reference</a>
+      <img class="carat" src="img/carat.png" />
+      ConcentricProgressRingView  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CircleLayer.html">CircleLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ConcentricProgressRingView.html">ConcentricProgressRingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ProgressRingLayer.html">ProgressRingLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ProgressRing.html">ProgressRing</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <p><img src="meta/repo-banner.png" alt="">
+<a href="https://lionheartsw.com/"><img src="meta/repo-banner-bottom.png" alt=""></a></p>
+
+<p><a href="https://travis-ci.org/lionheart/ConcentricProgressRingView"><img src="https://img.shields.io/travis/lionheart/ConcentricProgressRingView.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/ConcentricProgressRingView"><img src="https://img.shields.io/cocoapods/v/ConcentricProgressRingView.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/ConcentricProgressRingView"><img src="https://img.shields.io/cocoapods/l/ConcentricProgressRingView.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/ConcentricProgressRingView"><img src="https://img.shields.io/cocoapods/p/ConcentricProgressRingView.svg?style=flat" alt="Platform"></a>
+<a href="https://swift.org"><img src="http://img.shields.io/badge/swift-4-blue.svg?style=flat" alt="Swift"></a></p>
+
+<p>Fully customizable, circular progress bar written in Swift.</p>
+
+<p><img src="animation.gif" height="150" width="150" /></p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first. You can also view the example app at <a href="https://appetize.io/app/xw49k81xufbqkmwdhpebkpyn58?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3&deviceColor=black">Appetize.io</a>.</p>
+<h3 id='usage' class='heading'>Usage</h3>
+
+<p>At the top of your file, make sure to import <q>ConcentricProgressRingView</q></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ConcentricProgressRingView</span>
+</code></pre>
+
+<p>Then, instantiate ConcentricProgressRingView in your view controller:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="k">let</span> <span class="nv">fgColor1</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span>
+    <span class="k">let</span> <span class="nv">bgColor1</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">darkGray</span>
+    <span class="k">let</span> <span class="nv">fgColor2</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">green</span>
+    <span class="k">let</span> <span class="nv">bgColor2</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">darkGray</span>
+
+    <span class="k">let</span> <span class="nv">rings</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">18</span><span class="p">),</span>
+        <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">18</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="k">let</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">let</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="k">let</span> <span class="nv">progressRingView</span> <span class="o">=</span> <span class="kt">ConcentricProgressRingView</span><span class="p">(</span><span class="nv">center</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="n">margin</span><span class="p">,</span> <span class="nv">rings</span><span class="p">:</span> <span class="n">rings</span><span class="p">)</span>
+
+    <span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">progressRingView</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><img src="example1.png" alt=""></p>
+
+<p>You can customize the width, margin, and radius, along with the number of rings. Here&rsquo;s another example with 6 progress rings, with a smaller bar width, larger margin between rings, and a larger radius:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">rings</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="k">let</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">let</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="k">let</span> <span class="nv">progressRingView</span> <span class="o">=</span> <span class="kt">ConcentricProgressRingView</span><span class="p">(</span><span class="nv">center</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="n">margin</span><span class="p">,</span> <span class="nv">rings</span><span class="p">:</span> <span class="n">rings</span><span class="p">)</span>
+</code></pre>
+
+<p><img src="example2.png" width="194" /></p>
+
+<p>Repeating widths can get a bit tedious, so you can omit them&mdash;but you&rsquo;ll still need to provide default values to the initializer. If you don&rsquo;t, the compiler will warn you that there&rsquo;s a problem. The initializer can throw if you provide invalid parameters, so you&rsquo;ll need to handle that.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">rings</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor1</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor1</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">fgColor2</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="n">bgColor2</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="k">let</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">let</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="k">let</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="k">let</span> <span class="nv">progressRingView</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">ConcentricProgressRingView</span><span class="p">(</span><span class="nv">center</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="n">margin</span><span class="p">,</span> <span class="nv">rings</span><span class="p">:</span> <span class="n">rings</span><span class="p">,</span> <span class="n">defaultColor</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">defaultWidth</span><span class="p">:</span> <span class="n">width</span><span class="p">)</span>
+</code></pre>
+
+<p>Rings can have varying widths, colors, and background colors.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">rings</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">(</span><span class="o">.</span><span class="kt">RGB</span><span class="p">(</span><span class="mi">160</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">(</span><span class="o">.</span><span class="kt">RGB</span><span class="p">(</span><span class="mi">44</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">40</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">(</span><span class="o">.</span><span class="kt">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">(</span><span class="o">.</span><span class="kt">RGB</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">20</span><span class="p">),</span>
+    <span class="kt">ProgressRing</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">(</span><span class="o">.</span><span class="kt">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">93</span><span class="p">))),</span>
+<span class="p">]</span>
+<span class="k">let</span> <span class="nv">progressRingView</span> <span class="o">=</span> <span class="k">try!</span> <span class="kt">ConcentricProgressRingView</span><span class="p">(</span><span class="nv">center</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="n">margin</span><span class="p">,</span> <span class="nv">rings</span><span class="p">:</span> <span class="n">rings</span><span class="p">,</span> <span class="n">defaultWidth</span><span class="p">:</span> <span class="mi">30</span><span class="p">)</span>
+</code></pre>
+
+<p><img src="example3.png" width="267" /></p>
+<h4 id='updating-progress' class='heading'>Updating Progress</h4>
+
+<p>To animate a progress update, use <code>setProgress</code>.</p>
+<pre class="highlight swift"><code><span class="n">ring</span><span class="o">.</span><span class="n">arcs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="nf">setProgress</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre>
+
+<p>You can also use subscripts to access the individual arcs.</p>
+<pre class="highlight swift"><code><span class="n">ring</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="nf">setProgress</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre>
+
+<p>If you just want to change the progress, just set the progress on the ring, and it&rsquo;ll change immediately.</p>
+<pre class="highlight swift"><code><span class="n">ring</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="mf">0.5</span>
+</code></pre>
+
+<p>If you&rsquo;d like to update multiple rings simulataneously, you can iterate over <code><a href="Classes/ConcentricProgressRingView.html">ConcentricProgressRingView</a></code> since it conforms to <code>SequenceType</code>.</p>
+<pre class="highlight swift"><code><span class="k">for</span> <span class="n">ring</span> <span class="k">in</span> <span class="n">progressRingView</span> <span class="p">{</span>
+    <span class="n">ring</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='requirements' class='heading'>Requirements</h2>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>ConcentricProgressRingView is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"ConcentricProgressRingView"</span>
+</code></pre>
+<h2 id='todo' class='heading'>TODO</h2>
+
+<ul>
+<li>[x] Swift 3</li>
+<li>[ ] Documentation</li>
+<li>[x] Tests</li>
+</ul>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Dan Loewenherz, <a href="mailto:dan@lionheartsw.com">dan@lionheartsw.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>ConcentricProgressRingView is available under the Apache 2.0 license. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
+
+<!-- Images -->
+
+<!-- Links -->
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2016-2017 Lionheart Software LLC</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

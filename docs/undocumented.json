@@ -1,0 +1,138 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 10,
+      "symbol": "ProgressRing",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 11,
+      "symbol": "ProgressRing.width",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 12,
+      "symbol": "ProgressRing.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 13,
+      "symbol": "ProgressRing.backgroundColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 15,
+      "symbol": "ProgressRing.init(color:backgroundColor:width:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 21,
+      "symbol": "ProgressRing.init(color:backgroundColor:width:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 28,
+      "symbol": "ProgressRingLayer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 31,
+      "symbol": "ProgressRingLayer.progress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 41,
+      "symbol": "ProgressRingLayer.init(center:radius:width:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 55,
+      "symbol": "ProgressRingLayer.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 63,
+      "symbol": "ProgressRingLayer.setProgress(_:duration:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 75,
+      "symbol": "ProgressRingLayer.animationDidStop(_:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 82,
+      "symbol": "CircleLayer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 88,
+      "symbol": "CircleLayer.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 97,
+      "symbol": "ConcentricProgressRingView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 98,
+      "symbol": "ConcentricProgressRingView.arcs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 106,
+      "symbol": "ConcentricProgressRingView.init(center:radius:margin:rings:defaultColor:defaultBackgroundColor:defaultWidth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 130,
+      "symbol": "ConcentricProgressRingView.init(center:radius:margin:rings:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/ConcentricProgressRingView/ConcentricProgressRingView/Classes/ConcentricProgressRing.swift",
+      "line": 156,
+      "symbol": "ConcentricProgressRingView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/dan/Projects/ConcentricProgressRingView"
+}
