@@ -47,7 +47,7 @@ open class ProgressRingLayer: CAShapeLayer {
         fillColor = UIColor.clear.cgColor
         strokeColor = color.cgColor
         lineWidth = width
-        lineCap = kCALineCapRound
+        lineCap = CAShapeLayerLineCap.round
         strokeStart = 0
         strokeEnd = 0
     }
@@ -66,8 +66,7 @@ open class ProgressRingLayer: CAShapeLayer {
         animation.toValue = progress
         animation.duration = CFTimeInterval(duration)
         animation.delegate = self as? CAAnimationDelegate
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         strokeEnd = progress
         add(animation, forKey: "strokeEnd")
     }
