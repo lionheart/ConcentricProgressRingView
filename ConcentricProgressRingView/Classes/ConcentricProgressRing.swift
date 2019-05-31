@@ -71,7 +71,7 @@ open class ProgressRingLayer: CAShapeLayer, CAAnimationDelegate {
         self.completion = completion
         add(animation, forKey: "strokeEnd")
     }
-
+    
     open func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag {
             completion?()
