@@ -49,8 +49,7 @@ class ViewController: UIViewController {
 
         let f = Int64(0.2 * Double(index) * Double(NSEC_PER_SEC))
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(f) / Double(NSEC_PER_SEC), execute: {
-            self.progressRingView[index].setProgress(CGFloat(drand48()), duration: max(0.4, CGFloat(drand48())))
+            self.progressRingView[index].setProgress(CGFloat(drand48()), duration: max(0.4, CGFloat(drand48()))){print("completion")}
         })
-    }
 }
 

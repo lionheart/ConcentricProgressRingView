@@ -25,7 +25,7 @@ public struct ProgressRing {
     }
 }
 
-open class ProgressRingLayer: CAShapeLayer {
+open class ProgressRingLayer: CAShapeLayer, CAAnimationDelegate {
     var completion: (() -> Void)?
 
     open var progress: CGFloat? {
@@ -65,9 +65,10 @@ open class ProgressRingLayer: CAShapeLayer {
         animation.fromValue = strokeEnd
         animation.toValue = progress
         animation.duration = CFTimeInterval(duration)
-        animation.delegate = self as? CAAnimationDelegate
+        animation.delegate = self
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         strokeEnd = progress
+        self.completion = completion
         add(animation, forKey: "strokeEnd")
     }
 
