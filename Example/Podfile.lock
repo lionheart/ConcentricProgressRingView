@@ -1,5 +1,5 @@
 PODS:
-  - ConcentricProgressRingView (2.0.0):
+  - ConcentricProgressRingView (2.0.2):
     - LionheartExtensions
   - LionheartExtensions (3.11.4):
     - LionheartExtensions/Core (= 3.11.4)
@@ -13,16 +13,22 @@ DEPENDENCIES:
   - Nimble (~> 7)
   - Quick (~> 1)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LionheartExtensions
+    - Nimble
+    - Quick
+
 EXTERNAL SOURCES:
   ConcentricProgressRingView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  ConcentricProgressRingView: b7994d3cdb3421c8273750a18f4efa171e628a71
+  ConcentricProgressRingView: e123c811722e610aeeb40201abf033b23fd393aa
   LionheartExtensions: 1cb1f17f3d75ff48757d6aeeb40fbe9f9516e300
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
 PODFILE CHECKSUM: 9870839634870d9146dc16ddb8cc0bbe0be1bb88
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1

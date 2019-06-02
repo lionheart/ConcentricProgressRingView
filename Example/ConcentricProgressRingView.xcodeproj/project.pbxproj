@@ -171,7 +171,6 @@
 				37C0F5AA1FCD042B000DB42E /* Frameworks */,
 				37C0F5AB1FCD042B000DB42E /* Resources */,
 				11C974A427414FF6EA0DA125 /* [CP] Embed Pods Frameworks */,
-				9A69ED98045307F6B3D674E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,7 +191,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				2C3C1F016294790D384E9860 /* [CP] Embed Pods Frameworks */,
-				E0132CBC779D0E2D6D0EA701 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +229,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -272,7 +271,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -283,7 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1DD8B60693DAF6CF0C05F5BC /* [CP] Check Pods Manifest.lock */ = {
@@ -310,7 +309,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_Example/Pods-ConcentricProgressRingView_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ConcentricProgressRingView_Example/Pods-ConcentricProgressRingView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ConcentricProgressRingView/ConcentricProgressRingView.framework",
 				"${BUILT_PRODUCTS_DIR}/LionheartExtensions/LionheartExtensions.framework",
 			);
@@ -321,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_Example/Pods-ConcentricProgressRingView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConcentricProgressRingView_Example/Pods-ConcentricProgressRingView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		40C7B7A9C43CFF5CECC1DB0A /* [CP] Check Pods Manifest.lock */ = {
@@ -340,36 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A69ED98045307F6B3D674E8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_ExampleTests/Pods-ConcentricProgressRingView_ExampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E0132CBC779D0E2D6D0EA701 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcentricProgressRingView_Example/Pods-ConcentricProgressRingView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -582,6 +551,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63553QQ62F;
 				INFOPLIST_FILE = ConcentricProgressRingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -598,6 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63553QQ62F;
 				INFOPLIST_FILE = ConcentricProgressRingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
