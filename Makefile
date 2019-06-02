@@ -39,7 +39,7 @@ generate_docs: replace_text
 	bundle exec jazzy
 	git add docs/
 	git add .jazzy.yaml
-	git commit -m "documentation update"
+	-git commit -m "documentation update"
 	sync_directory_to_s3 "$(AWS_S3_REGION)" "$(AWS_S3_BUCKET_NAME)" "$(AWS_CF_DISTRIBUTION_ID)" "docs" "$(DIRECTORY)/"
 
 tag: quicklint generate_docs
