@@ -191,7 +191,7 @@ public extension UIView {
      - Date: February 17, 2016
      */
     @available(iOS 9, *)
-    func fillSuperview(_ axis: UILayoutConstraintAxis? = nil, margin: CGFloat = 0) {
+    func fillSuperview(_ axis: NSLayoutConstraint.Axis? = nil, margin: CGFloat = 0) {
         if let axis = axis {
             switch (axis) {
             case .horizontal:
@@ -246,7 +246,7 @@ public extension UIView {
      */
     @discardableResult
     class func addVisualFormatConstraints(_ format: String, metrics: LayoutDictionary? = nil, views: LayoutDictionary) -> [NSLayoutConstraint] {
-        let options = NSLayoutFormatOptions(rawValue: 0)
+        let options = NSLayoutConstraint.FormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: format, options: options, metrics: metrics, views: views)
 
         NSLayoutConstraint.activate(constraints)

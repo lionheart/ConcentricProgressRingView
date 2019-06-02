@@ -228,7 +228,7 @@ public extension NSString {
         return String(self).stringByReplacingSpacesWithDashes
     }
 
-    public func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
+    func stringByConverting(toNamingFormat naming: VariableNamingFormat) -> String {
         return String(self).stringByConverting(toNamingFormat: naming)
     }
 }
@@ -264,20 +264,20 @@ public extension NSAttributedString {
 }
 
 public extension NSMutableAttributedString {
-    func addString(_ string: String, attributes: [NSAttributedStringKey: Any]) {
+    func addString(_ string: String, attributes: [NSAttributedString.Key: Any]) {
         let attributedString = NSAttributedString(string: string, attributes: attributes)
         append(attributedString)
     }
     
-    func addAttribute(_ name: NSAttributedStringKey, value: Any) {
+    func addAttribute(_ name: NSAttributedString.Key, value: Any) {
         addAttribute(name, value: value, range: range)
     }
     
-    func addAttributes(_ attributes: [NSAttributedStringKey: Any]) {
+    func addAttributes(_ attributes: [NSAttributedString.Key: Any]) {
         addAttributes(attributes, range: range)
     }
     
     func removeAttribute(_ name: String) {
-        removeAttribute(NSAttributedStringKey(rawValue: name), range: range)
+        removeAttribute(NSAttributedString.Key(rawValue: name), range: range)
     }
 }

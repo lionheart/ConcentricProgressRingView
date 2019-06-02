@@ -75,6 +75,10 @@ public extension UIColor {
         }
     }
     
+    convenience init(from string: String) {
+        self.init(ColorRepresentation(from: string))
+    }
+    
     /// Returns a `UIColor` with each color component of `self` lightened by `ratio`.
     func lighten(byRatio ratio: CGFloat) -> UIColor {
         var R: CGFloat = 0

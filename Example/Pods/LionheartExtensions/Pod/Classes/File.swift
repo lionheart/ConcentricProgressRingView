@@ -16,10 +16,10 @@
 
 import Foundation
 
-final class File {
-    var filename: String?
+public final class File {
+    public var filename: String?
 
-    init(_ filename: String) {
+    public init(_ filename: String) {
         self.filename = filename
     }
 

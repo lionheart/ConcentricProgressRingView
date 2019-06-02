@@ -27,10 +27,10 @@ public extension UIAlertController {
          * handler: A block to execute when the user selects the action. This block has no return value and takes the selected action object as its only parameter.
      - Date: February 17, 2016
      */
-    public func addAction(title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) {
+    func addAction(title: String, style: UIAlertAction.Style, handler: ((UIAlertAction) -> Void)?) {
         addAction(UIAlertAction(title: title, style: style, handler: handler))
     }
 
     @available(*, unavailable, renamed: "addAction(title:style:handler:)")
-    public func addAction(withTitle title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) { }
+    func addAction(withTitle title: String, style: UIAlertAction.Style, handler: ((UIAlertAction) -> Void)?) { }
 }
