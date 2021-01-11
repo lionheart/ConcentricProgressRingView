@@ -69,7 +69,7 @@ GEM
     netrc (0.11.0)
     open4 (1.3.4)
     parslet (1.8.2)
-    rack (2.0.7)
+    rack (2.1.4)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -108,7 +108,7 @@ DEPENDENCIES
   cocoapods (~> 1.0)
   ffi (~> 1.9.24)
   jazzy (~> 0.9)
-  rack (~> 2.0.6)
+  rack (~> 2.1.4)
   xcpretty (~> 0.2)
   yarn (~> 0.1)
 
