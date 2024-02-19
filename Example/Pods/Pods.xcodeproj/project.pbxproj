@@ -19,7 +19,6 @@
 		0C4D07BF5DC99DA62660219A77C51034 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A926133C3535E3598FF0D7D3248E68F /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		0C85DEFA402715C4C9C93762A2C537CB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851A70867668485598EC18D77E820FB7 /* Errors.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		0DE8EDC38662353F29B931526BBB404A /* Pods-ConcentricProgressRingView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E4CF3275A1A81654EF540CC3848DAD /* Pods-ConcentricProgressRingView_Example-dummy.m */; };
-		0F01A77821B66A2443B4B006851BCA1E /* ConcentricProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99674859B61B78D8FAF4D3ED8C206EC7 /* ConcentricProgressRing.swift */; };
 		112206B912AD725BBFF728D367A0B05D /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 7939EAEB9B5EF19FF1F9DCE8944BEA58 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1141C2BED9C5485C4932CCF177B61512 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619359A6700410B4F064EE3A2E4CAD18 /* BeNil.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		114C9C583691C31F214E6DAE5832D80B /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D23ADFA5EBA0867E9B0684CB5894DE5 /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -155,6 +154,7 @@
 		F2C782423D962FABA25FD45E59C3E57B /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DE2CABC7A5F2D01C86430B72FA9D4 /* DSL.swift */; };
 		F3808A91FF8EB82C62EFD4DFA273313D /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 032E6FA9E9CA4A57CD85073862007D4C /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4C91C45B5F2C8AF919CFF6E22FAC237 /* ColorRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4FD2AF5E8D059A171FCE11128FEE77 /* ColorRepresentation.swift */; };
+		F63B10F92B839A4000AB677A /* ConcentricProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B10F82B839A4000AB677A /* ConcentricProgressRing.swift */; };
 		F906C60542305B69C8D4AF2B50DD3BC8 /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6C902C0866996B52137019BB92311 /* BeCloseTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		FA3A677BF9CA291AC4257BF6CCE0B451 /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F7A916D8AB74A82B39E3E6E6A375F /* ExpectationMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		FAA786A27FA82E6E91A897C7D7237F74 /* CIImage+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72106A8C88DFE4ADE882187D9519F197 /* CIImage+LionheartExtensions.swift */; };
@@ -215,13 +215,13 @@
 		01E5C16EE294B57C16783ED56D6F96E2 /* Pods-ConcentricProgressRingView_ExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ConcentricProgressRingView_ExampleTests-umbrella.h"; sourceTree = "<group>"; };
 		032E6FA9E9CA4A57CD85073862007D4C /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
 		03F65C1E266B7FFAF6FC325602A04214 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Sources/Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
-		06AA9A6C4ED76F939FF544B8524166BA /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		06AA9A6C4ED76F939FF544B8524166BA /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Classes.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
 		0A690363B063FC6E795DF85A5DA276FE /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
 		0A926133C3535E3598FF0D7D3248E68F /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		0B32F616AB4340B92902E70997B4AF29 /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Sources/Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
 		0D0934CCB925D750884466CF89EE01D8 /* ContainElementSatisfying.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainElementSatisfying.swift; path = Sources/Nimble/Matchers/ContainElementSatisfying.swift; sourceTree = "<group>"; };
 		0D23ADFA5EBA0867E9B0684CB5894DE5 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
-		0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1197F30DA3DF88DC32171B69EE9ADD0B /* CwlBadInstructionException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlBadInstructionException.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlBadInstructionException.swift; sourceTree = "<group>"; };
 		12264829A6CA592D6E091201D1963BD4 /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Sources/Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
 		127A2AD378091823AB133BCB231AACA0 /* Await.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Await.swift; path = Sources/Nimble/Utils/Await.swift; sourceTree = "<group>"; };
@@ -230,28 +230,28 @@
 		1809E648698AB97E5DFBF7C559DD2421 /* UIWindow+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIWindow+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		197E4D02CE6A7E6C357BE347FA6D7B5B /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Pod/Classes/Functional.swift; sourceTree = "<group>"; };
 		1B3C456B2D24FE62DBEA3C0C280DCE48 /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickSpecBase/include/QuickSpecBase.h; sourceTree = "<group>"; };
-		1C1468C259C04EC923266D87AE301370 /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.search.js; path = docs/js/jazzy.search.js; sourceTree = "<group>"; };
-		1C9831F11217297D1F035D4D3476A8C8 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		1C1468C259C04EC923266D87AE301370 /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.search.js; path = docs/js/jazzy.search.js; sourceTree = "<group>"; };
+		1C9831F11217297D1F035D4D3476A8C8 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
 		1E5790678EDA9B4C4F5C5A4AF9CFC4D0 /* UIApplicationDelegate+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplicationDelegate+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		1F1AA7AC9009F0A6CBBC4405FD7CD146 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Quick/Behavior.swift; sourceTree = "<group>"; };
-		2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LionheartExtensions.framework; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		223B2F05FC71C05325BF36B3CA92A5CB /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
 		2345125B66CAADAFB03B6AFC19DD1A74 /* Pods-ConcentricProgressRingView_ExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConcentricProgressRingView_ExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2394279348C7659011623A5D0896F9C1 /* Pods-ConcentricProgressRingView_ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConcentricProgressRingView_ExampleTests-Info.plist"; sourceTree = "<group>"; };
-		2589CA4ADF81B5D8F37D264A28901C97 /* filelist-local */ = {isa = PBXFileReference; includeInIndex = 1; name = "filelist-local"; path = "docs/filelist-local"; sourceTree = "<group>"; };
+		2589CA4ADF81B5D8F37D264A28901C97 /* filelist-local */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "filelist-local"; path = "docs/filelist-local"; sourceTree = "<group>"; };
 		268D4F5EBF6FBE0548CBDE08DBB2CAE1 /* URL+FileName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+FileName.swift"; path = "Sources/Quick/URL+FileName.swift"; sourceTree = "<group>"; };
-		27840F86676F98B512F17ECBA55B69CF /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		27840F86676F98B512F17ECBA55B69CF /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = docSet.dsidx; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
 		2956B519B5A74D68CD1C47BEA90E71C9 /* ConcentricProgressRingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ConcentricProgressRingView-dummy.m"; sourceTree = "<group>"; };
 		2AAC345F357ABF53D15F7C0E965308C0 /* spinner.gif */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.gif; name = spinner.gif; path = docs/img/spinner.gif; sourceTree = "<group>"; };
 		2ABAFE9001749E882E7D1A85FE2DFECB /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
 		2DBFC718021F8566DC9253AB21FB162F /* Quick-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Quick-Info.plist"; sourceTree = "<group>"; };
 		2DE6742814B6EBC587FD3364268DC8A8 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
-		2E01FA46E4662836CE2C8BEA752E0FBC /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = lunr.min.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/lunr.min.js; sourceTree = "<group>"; };
+		2E01FA46E4662836CE2C8BEA752E0FBC /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = lunr.min.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/lunr.min.js; sourceTree = "<group>"; };
 		2E66BC2526AF0CE64E5862B02ED2E25C /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
 		2F4FD2AF5E8D059A171FCE11128FEE77 /* ColorRepresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorRepresentation.swift; path = Pod/Classes/ColorRepresentation.swift; sourceTree = "<group>"; };
 		2FD66186C2AF3A9AD3688DA203D0186B /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Sources/Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
-		3024E9C6FB16B864F35881FAE2A3EA7A /* Pods_ConcentricProgressRingView_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ConcentricProgressRingView_ExampleTests.framework; path = "Pods-ConcentricProgressRingView_ExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		304C20A7D4FC605E9C1EB32C528A5E10 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Structs.html; sourceTree = "<group>"; };
+		3024E9C6FB16B864F35881FAE2A3EA7A /* Pods_ConcentricProgressRingView_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcentricProgressRingView_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		304C20A7D4FC605E9C1EB32C528A5E10 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Structs.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Structs.html; sourceTree = "<group>"; };
 		319C87F853EBEDFA4F4D80FBCDB9633B /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
 		34E0C396D2DFD04F51A3F68FF373C627 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		34F36ECDF66328B06840CB5ECC9BEFB9 /* LionheartExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,25 +259,25 @@
 		36C63295AC06CA9A0355B5002E98F63A /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
 		3865BCE6AA5C394FC46FEEFCBB090C04 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		388DEA0CCA57D206BBD1FCC5647CEE73 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
-		3950E2F61D7ECB555593725F9606C11C /* Pods_ConcentricProgressRingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ConcentricProgressRingView_Example.framework; path = "Pods-ConcentricProgressRingView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EFBDD49641DA0F7796930DB8FE123D5 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
+		3950E2F61D7ECB555593725F9606C11C /* Pods_ConcentricProgressRingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcentricProgressRingView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EFBDD49641DA0F7796930DB8FE123D5 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
 		42F1E9E765050EFB30617CB8636D8C2E /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		4570D8FB75DA0BC9E67CD1A7F8F4B81A /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		471F7C56381DDFE2FBCABB500DECE526 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
-		482F6F4E41C693BD38E41281582F2F8A /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; name = typeahead.jquery.js; path = docs/js/typeahead.jquery.js; sourceTree = "<group>"; };
+		482F6F4E41C693BD38E41281582F2F8A /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = typeahead.jquery.js; path = docs/js/typeahead.jquery.js; sourceTree = "<group>"; };
 		48A7906C5D4411742B92ABB1FCB4A153 /* Pods-ConcentricProgressRingView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ConcentricProgressRingView_Example.modulemap"; sourceTree = "<group>"; };
 		49BA20F8D56254440C58BCBC74DE0B24 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = File.swift; path = Pod/Classes/File.swift; sourceTree = "<group>"; };
-		4A376927251AB921B0B823315387A2C9 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/Structs.html; sourceTree = "<group>"; };
+		4A376927251AB921B0B823315387A2C9 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Structs.html; path = docs/Structs.html; sourceTree = "<group>"; };
 		4AC1664F8E0A9C1386883B9AA67C6F84 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
 		4B64879475389E294FFE1EB4BD6CEDFE /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		4BCF0125E0E84FDCAA403D9F515A46F7 /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Sources/Quick/Callsite.swift; sourceTree = "<group>"; };
-		4C3D183D9F89715908A1D7F573EC3170 /* ConcentricProgressRingView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConcentricProgressRingView.html; path = docs/Classes/ConcentricProgressRingView.html; sourceTree = "<group>"; };
-		4CADE7F0F4AA99B5933B097F8E7DEC04 /* filelist */ = {isa = PBXFileReference; includeInIndex = 1; name = filelist; path = docs/filelist; sourceTree = "<group>"; };
+		4C3D183D9F89715908A1D7F573EC3170 /* ConcentricProgressRingView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ConcentricProgressRingView.html; path = docs/Classes/ConcentricProgressRingView.html; sourceTree = "<group>"; };
+		4CADE7F0F4AA99B5933B097F8E7DEC04 /* filelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = filelist; path = docs/filelist; sourceTree = "<group>"; };
 		4E12FA855F4DEF3383913DBD3A9433E0 /* UIViewController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIViewController+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		4ECACCB92152AA4DC6263B61D5061C5E /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Sources/Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
 		50041E63F2CD928222A4C28DD5E2C1DA /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		51C8087948BA266123E76606B706CD21 /* NSRegularExpression+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSRegularExpression+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSRegularExpression+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ConcentricProgressRingView.framework; path = ConcentricProgressRingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConcentricProgressRingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		535762B588ED4C06CE2D5383243040EC /* ThrowAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowAssertion.swift; path = Sources/Nimble/Matchers/ThrowAssertion.swift; sourceTree = "<group>"; };
 		53AE0440C3BD9474AEB0616A973FA681 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
 		5417D552672022BA6B0FDED5DE0C5AA6 /* UIScreen+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScreen+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIScreen+LionheartExtensions.swift"; sourceTree = "<group>"; };
@@ -292,29 +292,29 @@
 		66915982C7DDBF14993229ADD4153C4F /* Pods-ConcentricProgressRingView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ConcentricProgressRingView_Example-umbrella.h"; sourceTree = "<group>"; };
 		6B9463C401A38D67A8FE1EEE25444ABF /* ConcentricProgressRingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConcentricProgressRingView-umbrella.h"; sourceTree = "<group>"; };
 		6C5A67ED17824FCBFE3B0405A8C018C6 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
-		6E73CB3CB6A9D076BB8F0BF8C71F3FFA /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
+		6E73CB3CB6A9D076BB8F0BF8C71F3FFA /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
 		6EAF4101F16BA7A6DDD31B55E80EDA8C /* Optional+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+LionheartExtensions.swift"; path = "Pod/Classes/Core/Optional+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		6F0CBB1BD0E92D851D78C4B4872BF446 /* NSBundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+CurrentTestBundle.swift"; path = "Sources/Quick/NSBundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
 		709775A5B22C7938C141B92F30EA416C /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
-		72039FBB5B0E5B0D9E1F17B2F8F591AA /* filelist-local-md5 */ = {isa = PBXFileReference; includeInIndex = 1; name = "filelist-local-md5"; path = "docs/filelist-local-md5"; sourceTree = "<group>"; };
+		72039FBB5B0E5B0D9E1F17B2F8F591AA /* filelist-local-md5 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "filelist-local-md5"; path = "docs/filelist-local-md5"; sourceTree = "<group>"; };
 		72106A8C88DFE4ADE882187D9519F197 /* CIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+LionheartExtensions.swift"; path = "Pod/Classes/Core/CIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		73E66280D86DA8C3A09D916DC002CC05 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
 		74D18DE3A4E232ADCCEF503F16A06F07 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
 		75265FF1B4134E98FF449420C8253973 /* Pods-ConcentricProgressRingView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ConcentricProgressRingView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7531752861373B15F32BDAA5DD3C82CD /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
+		7531752861373B15F32BDAA5DD3C82CD /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
 		754C0731739FBF16298F3169CC54ABAD /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
 		75F9EE79C3CD774146C2185C4A84E3D6 /* CwlCatchException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchException.h; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h; sourceTree = "<group>"; };
 		78A01C7F4C17AA4AC6AF1F7A8AEE4421 /* CwlMachBadInstructionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlMachBadInstructionHandler.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h; sourceTree = "<group>"; };
 		7939EAEB9B5EF19FF1F9DCE8944BEA58 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		7961EB73198B242DB4110BBE004D5CC1 /* Summable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Summable.swift; path = Pod/Classes/Summable.swift; sourceTree = "<group>"; };
-		799FA3C7570CA32B7D557A78B1573B7B /* ConcentricProgressRingView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConcentricProgressRingView.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes/ConcentricProgressRingView.html; sourceTree = "<group>"; };
+		799FA3C7570CA32B7D557A78B1573B7B /* ConcentricProgressRingView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ConcentricProgressRingView.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes/ConcentricProgressRingView.html; sourceTree = "<group>"; };
 		7A6A3567555899780B98994F7D06DEDA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7ABAC5660A8BF49E22671351403667CF /* IndexPath+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IndexPath+LionheartExtensions.swift"; path = "Pod/Classes/Core/IndexPath+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		7BF3D162B3C972B9D5C7D65CF6C3AB51 /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.search.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/jazzy.search.js; sourceTree = "<group>"; };
+		7BF3D162B3C972B9D5C7D65CF6C3AB51 /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.search.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/jazzy.search.js; sourceTree = "<group>"; };
 		7C4C35DF44D3914A75B499426950A350 /* spinner.gif */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.gif; name = spinner.gif; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/img/spinner.gif; sourceTree = "<group>"; };
 		7CE6C902C0866996B52137019BB92311 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
 		7FDBF0D9BCF3301DF1BEC2D265C072E4 /* UIColor+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIColor+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		8051D7EB9CCF45D3BB72BC3EA4D116D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		8051D7EB9CCF45D3BB72BC3EA4D116D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		80C7AA3861957990EF52DEC68C80DDF2 /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
 		8152A45E1AC1A9E3272B2ABB22FD3429 /* Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConcentricProgressRingView_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		81BDD984AD58D8E2C7925481D9CBFCB9 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
@@ -323,8 +323,8 @@
 		84BB74DA6B675E70B36EDB5537F44CD7 /* ConcentricProgressRingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConcentricProgressRingView-prefix.pch"; sourceTree = "<group>"; };
 		851A70867668485598EC18D77E820FB7 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/Nimble/Utils/Errors.swift; sourceTree = "<group>"; };
 		871695CB28A83D2E7E77166A78B5D466 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
-		8AB3526F567DA097813F0B1095857056 /* ProgressRingLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ProgressRingLayer.html; path = docs/Classes/ProgressRingLayer.html; sourceTree = "<group>"; };
-		8ACA2ABC694BBFAC556956DACD69380A /* filelist-md5 */ = {isa = PBXFileReference; includeInIndex = 1; name = "filelist-md5"; path = "docs/filelist-md5"; sourceTree = "<group>"; };
+		8AB3526F567DA097813F0B1095857056 /* ProgressRingLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ProgressRingLayer.html; path = docs/Classes/ProgressRingLayer.html; sourceTree = "<group>"; };
+		8ACA2ABC694BBFAC556956DACD69380A /* filelist-md5 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "filelist-md5"; path = "docs/filelist-md5"; sourceTree = "<group>"; };
 		8B3C9AF53EAB6983F30C098999F32104 /* UIDevice+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIDevice+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		8B56A29120E0111BFC1ED36280E9C867 /* LionheartExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LionheartExtensions-dummy.m"; sourceTree = "<group>"; };
 		8B99C2C5031F01010E72531A0C62D68C /* ExampleHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleHooks.swift; path = Sources/Quick/Hooks/ExampleHooks.swift; sourceTree = "<group>"; };
@@ -333,25 +333,24 @@
 		8DFF35EC889AA5E5E62ECB219E9F5A4A /* UIView+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIView+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		90CB1E8A56D4BC09A9E2FD778F32F539 /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
 		924BC32BF765E4637A25346FCE2F8631 /* Pods-ConcentricProgressRingView_ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ConcentricProgressRingView_ExampleTests-dummy.m"; sourceTree = "<group>"; };
-		9516FC2D9A6F9F62B340F64B710C7724 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		9516FC2D9A6F9F62B340F64B710C7724 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
 		956A77702AAE5BEB4607E93543988E9B /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Sources/QuickObjectiveC/DSL/QCKDSL.m; sourceTree = "<group>"; };
 		967604E3B2125F6ABC3CCCF198A75552 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Matchers/Async.swift; sourceTree = "<group>"; };
-		9801BD0979FF93DB6D96214FFC5839B5 /* CircleLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = CircleLayer.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes/CircleLayer.html; sourceTree = "<group>"; };
+		9801BD0979FF93DB6D96214FFC5839B5 /* CircleLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = CircleLayer.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes/CircleLayer.html; sourceTree = "<group>"; };
 		9802BEC555BC36759AC68DB242105A5F /* SatisfyAllOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAllOf.swift; path = Sources/Nimble/Matchers/SatisfyAllOf.swift; sourceTree = "<group>"; };
 		98D3E4D37FB47C3568E6427A828C5F50 /* CwlCatchException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlCatchException.m; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/CwlCatchException.m; sourceTree = "<group>"; };
 		98D56339BE4A86C21F383689728FDDC0 /* TitleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = Pod/Classes/TitleButton.swift; sourceTree = "<group>"; };
-		99674859B61B78D8FAF4D3ED8C206EC7 /* ConcentricProgressRing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcentricProgressRing.swift; path = ConcentricProgressRingView/Classes/ConcentricProgressRing.swift; sourceTree = "<group>"; };
-		9C23ACAA86641B98EFC8C13E7B069624 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
+		9C23ACAA86641B98EFC8C13E7B069624 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
 		9D282FB200E40A92CC08FE9A77A782D8 /* CwlCatchBadInstruction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchBadInstruction.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlCatchBadInstruction.swift; sourceTree = "<group>"; };
 		9D33E3506EA211AEF8E9C8DB04E5C760 /* Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConcentricProgressRingView_ExampleTests-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0726E3516FC1C183518854B44A5B096 /* Array+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+LionheartExtensions.swift"; path = "Pod/Classes/Core/Array+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		A097E3D62DF47F99C65282F8073058AF /* LionheartExtensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LionheartExtensions.xcconfig; sourceTree = "<group>"; };
 		A25C3367A27B731F685211F477883E81 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/Nimble/Expression.swift; sourceTree = "<group>"; };
 		A2DE64BACC625F37BF4FD96A78356DEF /* UIPrintPageRenderer+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPrintPageRenderer+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIPrintPageRenderer+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		A41680268F5927695F03A37F498CA4BB /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; name = typeahead.jquery.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/typeahead.jquery.js; sourceTree = "<group>"; };
-		A4DCAAC363335AB93E3504B8414FFAB3 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
-		A6811EAD1F32D5A32284ED646F6D59CB /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
+		A41680268F5927695F03A37F498CA4BB /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = typeahead.jquery.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/typeahead.jquery.js; sourceTree = "<group>"; };
+		A4DCAAC363335AB93E3504B8414FFAB3 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
+		A6811EAD1F32D5A32284ED646F6D59CB /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
 		A68A68446C9637BB1F774E6AF0382B0B /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		A6E4CF3275A1A81654EF540CC3848DAD /* Pods-ConcentricProgressRingView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ConcentricProgressRingView_Example-dummy.m"; sourceTree = "<group>"; };
 		A82F31339ED43BCCC62C04BD0D5564B1 /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
@@ -368,27 +367,27 @@
 		B51FD32E99EE616DC844E7B63D640E8D /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
 		B568DE848BB12451EE4B5DB8CD097E7D /* NimbleEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleEnvironment.swift; path = Sources/Nimble/Adapters/NimbleEnvironment.swift; sourceTree = "<group>"; };
 		B6571B8B74A3DBA4BD419E35C17A25D8 /* Pods-ConcentricProgressRingView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConcentricProgressRingView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B66F4362BEB2A4267BDC17C062ECD234 /* ProgressRing.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ProgressRing.html; path = docs/Structs/ProgressRing.html; sourceTree = "<group>"; };
+		B66F4362BEB2A4267BDC17C062ECD234 /* ProgressRing.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ProgressRing.html; path = docs/Structs/ProgressRing.html; sourceTree = "<group>"; };
 		B6EAA783458E8EE5F2EC4973AEF0E898 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
 		B7F1607D74EDE8DFD7552AC512705DBF /* ActivityIndicatorButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorButton.swift; path = Pod/Classes/ActivityIndicatorButton.swift; sourceTree = "<group>"; };
-		B8E8DD2295A0528773DB56C7D271210A /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
-		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E8DD2295A0528773DB56C7D271210A /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE4BA0ED7DA5A7C47EA70FE664DA504 /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Sources/Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
 		BE338F0AFB7B54D0993233F4A646D340 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Sources/Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		C018B45F1023B7948860E054DD69542E /* UIAlertController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIAlertController+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		C049472269EFA92E0D22C9484FD84DC2 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
-		C130289B5D2DD03C3E841DEA2630F5EF /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
+		C130289B5D2DD03C3E841DEA2630F5EF /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
 		C1EB17EE2DAF14794F325D9D3F55BA77 /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
 		C374E0843414AC06D960B5F478AC6894 /* Pods-ConcentricProgressRingView_ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ConcentricProgressRingView_ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C4267C16A33469AE05DF5FFA84F4938A /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		C44E042CBF2481AD7AB58C15BB71D0ED /* Int+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+LionheartExtensions.swift"; path = "Pod/Classes/Core/Int+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		C6BD3FF1651A757FB74E1866E1C371E7 /* NMBStringify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBStringify.h; path = Sources/NimbleObjectiveC/NMBStringify.h; sourceTree = "<group>"; };
-		C723BEF9A7138421CCBC91D12F4A7D63 /* ConcentricProgressRingView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ConcentricProgressRingView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C723BEF9A7138421CCBC91D12F4A7D63 /* ConcentricProgressRingView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ConcentricProgressRingView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C8A8E6D448CB6C1A0D58F0EAA4F6A197 /* UITextField+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+LionheartExtensions.swift"; path = "Pod/Classes/Core/UITextField+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		C8C1022A397B46D7525CEC049A3E13B8 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		C8C1022A397B46D7525CEC049A3E13B8 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
 		C8C2D734C507E27508209AAC63EC71DA /* Any+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Any+LionheartExtensions.swift"; path = "Pod/Classes/Core/Any+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		C91DBADD8845E85180E0C6952E17B4CE /* Pods-ConcentricProgressRingView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConcentricProgressRingView_Example-Info.plist"; sourceTree = "<group>"; };
-		CA27251B8DE0FCA59823CB3D2AFE783A /* CircleLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = CircleLayer.html; path = docs/Classes/CircleLayer.html; sourceTree = "<group>"; };
+		CA27251B8DE0FCA59823CB3D2AFE783A /* CircleLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = CircleLayer.html; path = docs/Classes/CircleLayer.html; sourceTree = "<group>"; };
 		CB1BA4E0DAAB86C565D375B5962903D0 /* Pods-ConcentricProgressRingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConcentricProgressRingView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CCAB1DA189C1ECA70C9289538422B0EB /* Pods-ConcentricProgressRingView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConcentricProgressRingView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CDEC48C99E294EB7BBCE6EFF9E13AB01 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
@@ -397,7 +396,7 @@
 		D103787717277A0F3067A11D909F2EB1 /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		D1C2DCAAC46B2938D6CF4F92608ED3B5 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
 		D298FAF202F6F24BB9450F97BED40BD7 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
-		D324956939CEE43DF32C6986636D0AEF /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
+		D324956939CEE43DF32C6986636D0AEF /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
 		D3ABB4C8FFD4C354E1041A5FF05366A9 /* UIFont+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIFont+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		D4036E3EC6D445E5759E9FD024A3419B /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
 		D46973B59664D72AE14ECB2D1ABD83BB /* LionheartExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LionheartExtensions-Info.plist"; sourceTree = "<group>"; };
@@ -408,10 +407,10 @@
 		D640466715DF246710BB28373DA8EB32 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		D6AAEB9841ECF50C5D4482B66654DE90 /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Sources/Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
 		D7067BACC8280F22C951763DCB53F962 /* DateFormatter+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+LionheartExtensions.swift"; path = "Pod/Classes/Core/DateFormatter+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		D748C7DAD1FBB8063BBC4CB31F541E79 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
-		D898E36419C49929CD69DFD99CB1BF77 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
-		DE5B35C3A4137426200D535B60D99957 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		DEDA42A3FA6C2E180CBCB2B917C9684A /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		D748C7DAD1FBB8063BBC4CB31F541E79 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		D898E36419C49929CD69DFD99CB1BF77 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
+		DE5B35C3A4137426200D535B60D99957 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
+		DEDA42A3FA6C2E180CBCB2B917C9684A /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
 		E0C0E521EC9FB706360A3E38D8C6AC2D /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
 		E2501953C1E8D64ECE286ED88D9E46EA /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		E31DC46D63361060B6C05FE5D63D0A10 /* CustomButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomButtonType.swift; path = Pod/Classes/CustomButtonType.swift; sourceTree = "<group>"; };
@@ -428,21 +427,22 @@
 		EB18B10454230DE029EAACAC2C855683 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		EB40E36BE343F0BBED004CB0FC1A02D6 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		ED3F00776669679284F2153E0199E1C9 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
-		ED87B1F4EDF949D8E98D06BD6DBE9950 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		EE04E78F8A4FEFC98A51A872B89101A7 /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = lunr.min.js; path = docs/js/lunr.min.js; sourceTree = "<group>"; };
+		ED87B1F4EDF949D8E98D06BD6DBE9950 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EE04E78F8A4FEFC98A51A872B89101A7 /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = lunr.min.js; path = docs/js/lunr.min.js; sourceTree = "<group>"; };
 		EED1A0E3CDB56C8D54C49E2ADA659D8F /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/QuickObjectiveC/QuickSpec.h; sourceTree = "<group>"; };
 		EF605437B07EBEA0A49EB6F6AB963D04 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
 		EFD730F53BA3E71349F538904C941EAB /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Sources/Nimble/Expectation.swift; sourceTree = "<group>"; };
 		EFFCB70B57EBF486B88B4802F8B39AC7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Info.plist; sourceTree = "<group>"; };
 		F001B839468CCAABF6C0259C51E78217 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		F0CA51DF3267699F20BC619190E65A88 /* LionheartExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LionheartExtensions-umbrella.h"; sourceTree = "<group>"; };
-		F46902912883558F8EB447033C0674F4 /* ConcentricProgressRingView.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = ConcentricProgressRingView.tgz; path = docs/docsets/ConcentricProgressRingView.tgz; sourceTree = "<group>"; };
-		F5F5D86804E259BB7E71754E3572ADA4 /* ProgressRing.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ProgressRing.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Structs/ProgressRing.html; sourceTree = "<group>"; };
+		F46902912883558F8EB447033C0674F4 /* ConcentricProgressRingView.tgz */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ConcentricProgressRingView.tgz; path = docs/docsets/ConcentricProgressRingView.tgz; sourceTree = "<group>"; };
+		F5F5D86804E259BB7E71754E3572ADA4 /* ProgressRing.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ProgressRing.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Structs/ProgressRing.html; sourceTree = "<group>"; };
+		F63B10F82B839A4000AB677A /* ConcentricProgressRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConcentricProgressRing.swift; path = ConcentricProgressRingView/ConcentricProgressRing.swift; sourceTree = "<group>"; };
 		F8AE7322745AABD038A6E4A7F0E0396B /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		F8CF7B1F6DE6BB4BF460E2790AFE4334 /* NSURLSession+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSURLSession+LionheartExtensions.swift"; sourceTree = "<group>"; };
 		FA8CB621C193925239D035CC885A35C5 /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Sources/Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
 		FC5BEED0582CCEEC1E9F48F7FB5AF865 /* UIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		FD9B5BB548B5A1474090142F4F8D4254 /* ProgressRingLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ProgressRingLayer.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes/ProgressRingLayer.html; sourceTree = "<group>"; };
+		FD9B5BB548B5A1474090142F4F8D4254 /* ProgressRingLayer.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ProgressRingLayer.html; path = docs/docsets/ConcentricProgressRingView.docset/Contents/Resources/Documents/Classes/ProgressRingLayer.html; sourceTree = "<group>"; };
 		FDB0BCD91A8629A57935898753C76296 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		FEB820C1B188B37F4B7B7C293CD28297 /* Pods-ConcentricProgressRingView_ExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ConcentricProgressRingView_ExampleTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -598,7 +598,6 @@
 				5F2188EE3E655C8BF114265A7F78434A /* XCTestObservationCenter+Register.m */,
 				209BEC1A39190289FD474463BFF36F0E /* Support Files */,
 			);
-			name = Nimble;
 			path = Nimble;
 			sourceTree = "<group>";
 		};
@@ -711,7 +710,6 @@
 				D103787717277A0F3067A11D909F2EB1 /* XCTestSuite+QuickTestSuiteBuilder.m */,
 				B260E47E20554C398C5455395E3BEE23 /* Support Files */,
 			);
-			name = Quick;
 			path = Quick;
 			sourceTree = "<group>";
 		};
@@ -752,7 +750,6 @@
 				AC397231892CCF2EEF50CAD4C88DBFCB /* Core */,
 				B9C65F901FC1F5D4D12B350478AD97E4 /* Support Files */,
 			);
-			name = LionheartExtensions;
 			path = LionheartExtensions;
 			sourceTree = "<group>";
 		};
@@ -889,7 +886,7 @@
 		F386315B6B51FF26EA32C068FEE3FC6F /* ConcentricProgressRingView */ = {
 			isa = PBXGroup;
 			children = (
-				99674859B61B78D8FAF4D3ED8C206EC7 /* ConcentricProgressRing.swift */,
+				F63B10F82B839A4000AB677A /* ConcentricProgressRing.swift */,
 				5E6AD3A9E635A80D829BC3C26A17C107 /* Pod */,
 				933396449499CA53C9F8A9E8872FE54E /* Support Files */,
 			);
@@ -1086,6 +1083,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					7F9F152482955A392E61D7014E6D153E = {
+						LastSwiftMigration = 1520;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1286,8 +1288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F01A77821B66A2443B4B006851BCA1E /* ConcentricProgressRing.swift in Sources */,
 				36FC1283932E2FB463562813CE6C142C /* ConcentricProgressRingView-dummy.m in Sources */,
+				F63B10F92B839A4000AB677A /* ConcentricProgressRing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1565,6 +1567,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D566B35AB53EF364FED4BF0836C88F53 /* ConcentricProgressRingView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1586,6 +1589,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1694,6 +1699,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D566B35AB53EF364FED4BF0836C88F53 /* ConcentricProgressRingView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1715,6 +1721,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1775,8 +1782,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
